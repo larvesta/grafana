@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "sourceMap": true,
+        "declaration": true,
+        "outDir": "public_gen",
+        "noImplicitAny": false,
+        "target": "es5",
+        "rootDir": "public/",
+        "sourceRoot": "public/",
+        "module": "system",
+        "noEmitOnError": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true
+    },
+    "files": [
+        "public/app/**/*.ts"
+    ]
+}

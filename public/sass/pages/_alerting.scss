@@ -1,0 +1,40 @@
+.alert-state-paused,
+.alert-state-pending {
+  color: $text-muted;
+}
+
+.alert-state-ok {
+  color: $online;
+}
+
+.alert-state-warning {
+  color: $warn;
+}
+
+.alert-state-critical {
+  color: $critical;
+}
+
+.alert-notify-emails {
+  width: 400px;
+  border-right: 1px solid $black;
+}
+
+.alert-notify-emails .bootstrap-tagsinput {
+  width: 394px; // offset for 8px left padding and border width
+}
+
+.alert-notify-emails .bootstrap-tagsinput input {
+  border: 0;
+}
+
+// Alert List
+
+.alert-list-item-state {
+  font-weight: bold;
+  .icon-gf, .fa {
+    font-size: 120%;
+    position: relative;
+    top: 2px;
+  }
+}
