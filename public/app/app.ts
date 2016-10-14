@@ -9,6 +9,8 @@ import 'angular-sanitize';
 import 'angular-dragdrop';
 import 'angular-bindonce';
 import 'angular-ui';
+import 'angular-translate';
+import 'angular-translate-loader-static-files';
 
 import $ from 'jquery';
 import angular from 'angular';
@@ -16,6 +18,7 @@ import config from 'app/core/config';
 import _ from 'lodash';
 import moment from 'moment';
 import {coreModule} from './core/core';
+
 
 export class GrafanaApp {
   registerFunctions: any;
@@ -39,12 +42,19 @@ export class GrafanaApp {
   }
 
   init() {
-    var app = angular.module('grafana', []);
+    var app = angular.module('grafana', ['pascalprecht.translate']);
     app.constant('grafanaVersion', "@grafanaVersion@");
 
     moment.locale(config.bootData.user.locale);
 
-    app.config(($locationProvider, $controllerProvider, $compileProvider, $filterProvider, $httpProvider, $provide) => {
+    app.config(($translateProvider,$locationProvider, $controllerProvider, $compileProvider, $filterProvider, $httpProvider, $provide) => {
+      //json文件路径
+      $translateProvider.useStaticFilesLoader({
+          prefix: 'app/translate/',
+          suffix: '.json'
+      });
+      //默认使用英文
+      $translateProvider.preferredLanguage('en');
 
       if (config.buildInfo.env !== 'development') {
         $compileProvider.debugInfoEnabled(false);
