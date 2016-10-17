@@ -1,7 +1,7 @@
 <div ng-controller="AnnotationsEditorCtrl" ng-init="init()">
 	<div class="tabbed-view-header">
 		<h2 class="tabbed-view-title">
-			Annotations
+    {{'Annotations'|translate}}
 		</h2>
 
 		<ul class="gf-tabs">
@@ -16,7 +16,7 @@
 				</a>
 			</li>
 			<li class="gf-tabs-item" ng-show="mode === 'new'">
-				<span class="active gf-tabs-link">New</span>
+				<span class="active gf-tabs-link">{{'Add'|translate}}</span>
 			</li>
 		</ul>
 
@@ -27,9 +27,6 @@
 
 	<div class="tabbed-view-body">
 		<div class="editor-row row" ng-if="mode === 'list'">
-			<div ng-if="annotations.length === 0">
-				<em>No annotations defined</em>
-			</div>
 			<table class="grafana-options-table">
 				<tr ng-repeat="annotation in annotations">
 					<td style="width:90%">
@@ -42,7 +39,7 @@
 					<td style="width: 1%">
 						<a ng-click="edit(annotation)" class="btn btn-inverse btn-mini">
 							<i class="fa fa-edit"></i>
-							Edit
+							{{'Edit'|translate}}
 						</a>
 					</td>
 					<td style="width: 1%">
@@ -56,7 +53,7 @@
 
 		<div class="gf-form" ng-show="mode === 'list'">
 			<div class="gf-form-button-row">
-				<a type="button" class="btn gf-form-button btn-success" ng-click="mode = 'new';"><i class="fa fa-plus" ></i>&nbsp;&nbsp;New</a>
+				<a type="button" class="btn gf-form-button btn-success" ng-click="mode = 'new';"><i class="fa fa-plus" ></i>&nbsp;&nbsp;{{'Add'|translate}}</a>
 			</div>
 		</div>
 
@@ -64,18 +61,18 @@
 			<div class="gf-form-group">
 				<div class="gf-form-inline">
 					<div class="gf-form gf-size-max-xxl">
-						<span class="gf-form-label">Name</span>
+						<span class="gf-form-label">{{'Name'|translate}}</span>
 						<input type="text" class="gf-form-input" ng-model='currentAnnotation.name' placeholder="name"></input>
 					</div>
 					<div class="gf-form">
-						<span class="gf-form-label max-width-10">Datasource</span>
+						<span class="gf-form-label max-width-10">{{'Datasource'|translate}}</span>
 						<div class="gf-form-select-wrapper">
 							<select class="gf-form-input gf-size-auto" ng-model="currentAnnotation.datasource" ng-options="f.name as f.name for f in datasources" ng-change="datasourceChanged()"></select>
 						</div>
 					</div>
 					<div class="gf-form">
 						<label class="gf-form-label">
-							<span>Color</span>
+							<span>{{'Color'|translate}}</span>
 						</label>
 						<spectrum-picker class="gf-form-input" ng-model="currentAnnotation.iconColor"></spectrum-picker>
 					</div>
@@ -89,8 +86,8 @@
 
 			<div class="gf-form">
 				<div class="gf-form-button-row p-y-0">
-					<button ng-show="mode === 'new'" type="button" class="btn gf-form-button btn-success" ng-click="add()">Add</button>
-					<button ng-show="mode === 'edit'" type="button" class="btn btn-success pull-left" ng-click="update()">Update</button>
+					<button ng-show="mode === 'new'" type="button" class="btn gf-form-button btn-success" ng-click="add()">{{'Add'|translate}}</button>
+					<button ng-show="mode === 'edit'" type="button" class="btn btn-success pull-left" ng-click="update()">{{'Update'|translate}}</button>
 				</div>
 			</div>
 		</div>

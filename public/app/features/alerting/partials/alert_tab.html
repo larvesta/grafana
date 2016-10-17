@@ -2,18 +2,18 @@
 	<aside class="edit-sidemenu-aside">
 		<ul class="edit-sidemenu">
 			<li ng-class="{active: ctrl.subTabIndex === 0}">
-				<a ng-click="ctrl.subTabIndex = 0">Alert Config</a>
+				<a ng-click="ctrl.subTabIndex = 0">{{'Alert Config'|translate}}</a>
 			</li>
 			<li ng-class="{active: ctrl.subTabIndex === 1}">
 				<a ng-click="ctrl.subTabIndex = 1">
-					Notifications <span class="muted">({{ctrl.alert.notifications.length}})</span>
+					{{'Notifications'|translate}} <span class="muted">({{ctrl.alert.notifications.length}})</span>
 				</a>
 			</li>
 			<li ng-class="{active: ctrl.subTabIndex === 2}">
-				<a ng-click="ctrl.subTabIndex = 2">Alert History</a>
+				<a ng-click="ctrl.subTabIndex = 2">{{'Alert History'|translate}}</a>
 			</li>
       <li>
-				<a ng-click="ctrl.delete()">Delete</a>
+				<a ng-click="ctrl.delete()">{{'Delete'|translate}}</a>
 			</li>
 		</ul>
 	</aside>
@@ -25,18 +25,18 @@
 			</div>
 
 			<div class="gf-form-group">
-				<h5 class="section-heading">Alert Config</h5>
+				<h5 class="section-heading">{{'Alert Config'|translate}}</h5>
 				<div class="gf-form">
-					<span class="gf-form-label width-8">Name</span>
+					<span class="gf-form-label width-8">{{'Name'|translate}}</span>
 					<input type="text" class="gf-form-input width-25" ng-model="ctrl.alert.name">
 				</div>
 				<div class="gf-form-inline">
 					<div class="gf-form">
-						<span class="gf-form-label width-8">Evaluate every</span>
+						<span class="gf-form-label width-8">{{'Evaluate every'|translate}}</span>
 						<input class="gf-form-input max-width-7" type="text" ng-model="ctrl.alert.frequency"></input>
 					</div>
 					<div class="gf-form">
-						<span class="gf-form-label">Severity</span>
+						<span class="gf-form-label">{{'Severity'|translate}}</span>
 						<div class="gf-form-select-wrapper width-13">
 							<select class="gf-form-input" ng-model="ctrl.alert.severity" ng-options="key as value.text for (key, value) in ctrl.severityLevels" ng-change="ctrl.severityChanged()">
 							</select>
@@ -46,18 +46,18 @@
 			</div>
 
 			<div class="gf-form-group">
-				<h5 class="section-heading">Conditions</h5>
+				<h5 class="section-heading">{{'Conditions'|translate}}</h5>
 				<div class="gf-form-inline" ng-repeat="conditionModel in ctrl.conditionModels">
 					<div class="gf-form">
-						<span class="gf-form-label query-keyword width-5" ng-if="$index">AND</span>
-						<span class="gf-form-label query-keyword width-5" ng-if="$index===0">WHEN</span>
+						<span class="gf-form-label query-keyword width-5" ng-if="$index">{{'AND'|translate}}</span>
+						<span class="gf-form-label query-keyword width-5" ng-if="$index===0">{{'WHEN'|translate}}</span>
 					</div>
 					<div class="gf-form">
 						<query-part-editor class="gf-form-label query-part" part="conditionModel.queryPart" handle-event="ctrl.handleQueryPartEvent(conditionModel, $event)">
 						</query-part-editor>
 					</div>
 					<div class="gf-form">
-						<span class="gf-form-label">Reducer</span>
+						<span class="gf-form-label">{{'Reducer'|translate}}</span>
 						<query-part-editor class="gf-form-label query-part" part="conditionModel.reducerPart" handle-event="ctrl.handleReducerPartEvent(conditionModel, $event)">
 						</query-part-editor>
 					</div>
@@ -91,13 +91,13 @@
 
 				<div class="gf-form-button-row">
 					<button class="btn btn-inverse" ng-click="ctrl.test()">
-						Test Rule
+						{{'Test Rule'|translate}}
 					</button>
 				</div>
 			</div>
 
 			<div class="gf-form-group" ng-if="ctrl.testing">
-				Evaluating rule <i class="fa fa-spinner fa-spin"></i>
+				{{'Evaluating rule'|translate}} <i class="fa fa-spinner fa-spin"></i>
 			</div>
 
 			<div class="gf-form-group" ng-if="ctrl.testResult">
@@ -106,10 +106,10 @@
 		</div>
 
 		<div class="gf-form-group" ng-if="ctrl.subTabIndex === 1">
-			<h5 class="section-heading">Notifications</h5>
+			<h5 class="section-heading">{{'Notifications'|translate}}</h5>
 			<div class="gf-form-inline">
 				<div class="gf-form max-width-30">
-					<span class="gf-form-label width-8">Send to</span>
+					<span class="gf-form-label width-8">{{'Send to'|translate}}</span>
 					<span class="gf-form-label query-part" ng-repeat="nc in ctrl.alertNotifications">
 						<i class="{{nc.iconClass}}"></i>&nbsp;{{nc.name}}&nbsp;
 						<i class="fa fa-remove pointer muted" ng-click="ctrl.removeNotification($index)"></i>
@@ -118,13 +118,13 @@
 				</div>
 			</div>
 			<div class="gf-form gf-form--v-stretch">
-				<span class="gf-form-label width-8">Message</span>
+				<span class="gf-form-label width-8">{{'Message'|translate}}</span>
 				<textarea class="gf-form-input width-20" rows="10" ng-model="ctrl.alert.message"  placeholder="Notification message details..."></textarea>
 			</div>
 		</div>
 
 		<div class="gf-form-group" style="max-width: 720px;" ng-if="ctrl.subTabIndex === 2">
-			<h5 class="section-heading">Alert history</h5>
+			<h5 class="section-heading">{{'Alert history'|translate}}</h5>
 			<section class="card-section card-list-layout-list">
 				<ol class="card-list" >
 					<li class="card-item-wrapper" ng-repeat="ah in ctrl.alertHistory">
@@ -154,7 +154,7 @@
 	<div class="gf-form-button-row">
 		<button class="btn btn-inverse" ng-click="ctrl.enable()">
 			<i class="icon-gf icon-gf-alert"></i>
-			Create Alert
+			{{'Add'|translate}}
 		</button>
 	</div>
 </div>
