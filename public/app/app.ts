@@ -87,7 +87,20 @@ var TRANSLATE_EN = {
   'Save': 'Save',
   'Annotations': 'Annotations',
   'Datasource': 'Datasource',
-  'Color': 'Color'
+  'Color': 'Color',
+  'Snapshot': 'Snapshot',
+  'Link to Dashboard': 'Link to Dashboard',
+  'Export': 'Export',
+  'Templating': 'Templating',
+  'JSON TEXT': 'JSON TEXT',
+  'JSON FILE': 'JSON FILE',
+  'View JSON': 'View JSON',
+  'Save As': 'Save As',
+  'Hide or Show controls': 'Hide or Show controls',
+  'Back to dashboard': 'Back to dashboard',
+  'Cancel': 'Cancel',
+  'Import Dashboard': 'Import Dashboard',
+  'Load': 'Load'
 };
 
 var TRANSLATE_ZH = {
@@ -158,7 +171,20 @@ var TRANSLATE_ZH = {
   'Save': '保存',
   'Annotations': '注解',
   'Datasource': '数据源',
-  'Color': '颜色'
+  'Color': '颜色',
+  'Snapshot': '快照',
+  'Link to Dashboard': '跳转到Dashboard',
+  'Export': '导出',
+  'Templating': '模板',
+  'JSON TEXT': '方式2:JSON文本',
+  'JSON FILE': '方式1:JSON文件',
+  'View JSON': 'JSON视图',
+  'Save As': '另存为',
+  'Hide or Show controls': '显示/隐藏控制窗',
+  'Back to dashboard': '回到dashboard',
+  'Cancel': '取消',
+  'Import Dashboard': '导入Dashboard',
+  'Load': '加载'
 };
 
 export class GrafanaApp {

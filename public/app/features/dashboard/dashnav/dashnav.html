@@ -10,7 +10,7 @@
 	<i class="icon-gf icon-gf-snapshot"></i>
 	<span>
 		{{dashboard.title}}
-		<em class="small">&nbsp;&nbsp;(snapshot)</em>
+		<em class="small">&nbsp;&nbsp;({{'Snapshot'|translate}})</em>
 	</span>
 </a>
 
@@ -25,19 +25,19 @@
 		<ul class="dropdown-menu">
 			<li>
 				<a class="pointer" ng-click="shareDashboard(0)">
-					<i class="fa fa-link"></i> Link to Dashboard
+					<i class="fa fa-link"></i>{{'Link to Dashboard'|translate}}
 					<div class="dropdown-desc">Share an internal link to the current dashboard. Some configuration options available.</div>
 				</a>
 			</li>
 			<li>
 				<a class="pointer" ng-click="shareDashboard(1)">
-					<i class="icon-gf icon-gf-snapshot"></i>Snapshot
+					<i class="icon-gf icon-gf-snapshot"></i>{{'Snapshot'|translate}}
 					<div class="dropdown-desc">Interactive, publically accessible dashboard. Sensitive data is stripped out.</div>
 				</a>
 			</li>
       <li>
 				<a class="pointer" ng-click="shareDashboard(2)">
-					<i class="fa fa-cloud-upload"></i>Export
+					<i class="fa fa-cloud-upload"></i>{{'Export'|translate}}
 					<div class="dropdown-desc">Export the dashboard to a JSON file for others and to share on Grafana.net</div>
 				</a>
 			</li>
@@ -58,13 +58,13 @@
 	<li ng-if="contextSrv.isGrafanaAdmin && showSettingsMenu" class="dropdown">
 		<a class="pointer" ng-click="hideTooltip($event)" bs-tooltip="'Manage dashboard'" data-placement="bottom" data-toggle="dropdown"><i class="fa fa-cog"></i></a>
 		<ul class="dropdown-menu">
-			<li ng-if="dashboardMeta.canEdit"><a class="pointer" ng-click="openEditView('settings');">Settings</a></li>
-			<li ng-if="dashboardMeta.canEdit"><a class="pointer" ng-click="openEditView('annotations');">Annotations</a></li>
-			<li ng-if="dashboardMeta.canEdit"><a class="pointer" ng-click="openEditView('templating');">Templating</a></li>
-			<li ng-if="dashboardMeta.canEdit"><a class="pointer" ng-click="viewJson();">View JSON</a></li>
-			<li ng-if="contextSrv.isEditor"><a class="pointer" ng-click="saveDashboardAs();">Save As...</a></li>
-			<li ng-if="dashboardMeta.canSave"><a class="pointer" ng-click="deleteDashboard();">Delete dashboard</a></li>
-      <li ng-if="dashboardMeta.canEdit"><a class="pointer" ng-click="hideDashboardControls();">Hide controls</a></li>
+			<li ng-if="dashboardMeta.canEdit"><a class="pointer" ng-click="openEditView('settings');">{{'Edit'|translate}}</a></li>
+			<li ng-if="dashboardMeta.canEdit"><a class="pointer" ng-click="openEditView('annotations');">{{'Annotations'|translate}}</a></li>
+			<li ng-if="dashboardMeta.canEdit"><a class="pointer" ng-click="openEditView('templating');">{{'Templating'|translate}}</a></li>
+			<li ng-if="dashboardMeta.canEdit"><a class="pointer" ng-click="viewJson();">{{'View JSON'|translate}}</a></li>
+			<li ng-if="contextSrv.isEditor"><a class="pointer" ng-click="saveDashboardAs();">{{'Save As'|translate}}</a></li>
+			<li ng-if="dashboardMeta.canSave"><a class="pointer" ng-click="deleteDashboard();">{{'Delete'|translate}}</a></li>
+      <li ng-if="dashboardMeta.canEdit"><a class="pointer" ng-click="hideDashboardControls();">{{'Hide or Show controls'|translate}}</a></li>
 		</ul>
 	</li>
 </ul>
@@ -84,7 +84,7 @@
 <ul class="nav pull-right">
 	<li ng-show="dashboard.meta.fullscreen" class="dashnav-back-to-dashboard">
 		<a ng-click="exitFullscreen()">
-			Back to dashboard
+			{{'Back to dashboard'|translate}}
 		</a>
 	</li>
 	<li ng-if="dashboard">
