@@ -11,7 +11,6 @@ import 'angular-bindonce';
 import 'angular-ui';
 import 'angular-translate';
 
-
 import $ from 'jquery';
 import angular from 'angular';
 import config from 'app/core/config';
@@ -70,7 +69,7 @@ export class GrafanaApp {
       this.registerFunctions.filter     = $filterProvider.register;
 
       $provide.decorator("$http", ["$delegate", "$templateCache", function($delegate, $templateCache) {
-        var get = $delegate.get;	
+        var get = $delegate.get;
         $delegate.get = function(url, config) {
           if (url.match(/\.html$/)) {
             // some template's already exist in the cache
@@ -82,10 +81,8 @@ export class GrafanaApp {
         };
         return $delegate;
       }]);
-
-	  $translateProvider.translations('translate-zh', TRANSLATE_ZH);
- 	  $translateProvider.translations('translate-en', TRANSLATE_EN);
- 
+      $translateProvider.translations('translate-zh', TRANSLATE_ZH);
+      $translateProvider.translations('translate-en', TRANSLATE_EN);
       $translateProvider.preferredLanguage('translate-zh');
     });
 
