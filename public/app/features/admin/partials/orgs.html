@@ -1,20 +1,20 @@
 <navbar icon="fa fa-fw fa-cogs" title="Admin" title-url="admin">
 	<a href="admin/orgs" class="navbar-page-btn">
 		<i class="icon-gf icon-gf-users"></i>
-		Orgs
+		{{'Orgs'|translate}}
 	</a>
 </navbar>
 
 <div class="page-container">
 	<div class="page-header">
-		<h1>Organizations</h1>
+		<h1>{{'Organizations'|translate}}</h1>
 	</div>
 
 	<table class="filter-table form-inline">
 		<thead>
 			<tr>
-				<th>Id</th>
-				<th>Name</th>
+				<th>{{'Id'|translate}}</th>
+				<th>{{'Name'|translate}}</th>
 				<th></th>
 			</tr>
 		</thead>
@@ -25,7 +25,7 @@
 				<td class="text-right">
 					<a href="admin/orgs/edit/{{org.id}}" class="btn btn-inverse btn-small">
 						<i class="fa fa-edit"></i>
-						Edit
+						{{'Edit'|translate}}
 					</a>
 					&nbsp;&nbsp;
 					<a ng-click="deleteOrg(org)" class="btn btn-danger btn-small">

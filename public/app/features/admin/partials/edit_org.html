@@ -1,33 +1,33 @@
 <navbar icon="fa fa-fw fa-cogs" title="Admin" title-url="admin">
 	<a href="admin/orgs" class="navbar-page-btn">
 		<i class="icon-gf icon-gf-users"></i>
-		Orgs
+		{{'Orgs'|translate}}
 	</a>
 </navbar>
 
 <div class="page-container">
 	<div class="page-header">
-		<h1>Edit Organization</h1>
+		<h1>{{'Edit Organization'|translate}}</h1>
 	</div>
 
 	<form name="orgDetailsForm" class="gf-form-group">
 		<div class="gf-form">
-			<span class="gf-form-label width-10">Name</span>
+			<span class="gf-form-label width-10">{{'Name'|translate}}</span>
 			<input type="text" required ng-model="org.name" class="gf-form-input max-width-14" >
 		</div>
 
 		<div class="gf-form-button-row">
-			<button type="submit" class="btn btn-success" ng-click="update()" ng-show="!createMode">Update</button>
+			<button type="submit" class="btn btn-success" ng-click="update()" ng-show="!createMode">{{'Update'|translate}}</button>
 		</div>
 	</form>
 
-	<h3 class="page-heading">Organization Users</h3>
+	<h3 class="page-heading">{{'Organization Users'|translate}}</h3>
 
 	<table class="grafana-options-table">
 		<tr>
-			<th>Username</th>
-			<th>Email</th>
-			<th>Role</th>
+			<th>{{'Username'|translate}}</th>
+			<th>{{'Email'|translate}}</th>
+			<th>{{'Role'|translate}}</th>
 			<th></th>
 		</tr>
 		<tr ng-repeat="orgUser in orgUsers">

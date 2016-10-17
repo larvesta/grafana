@@ -3,13 +3,8 @@
 
 <div class="page-container">
 	<div class="page-header">
-		<h1>Server settings</h1>
+		<h1>{{'Server settings'|translate}}</h1>
 	</div>
-
-		<div class="grafana-info-box span8" style="margin: 20px 0 25px 0">
-			These system settings are defined in grafana.ini or grafana.custom.ini (or overriden in ENV variables).
-			To change these you currently need to restart grafana.
-		</div>
 
 		<table class="grafana-options-table">
 			<tr ng-repeat-start="(secName, secValue) in settings">

@@ -1,28 +1,28 @@
 <navbar icon="fa fa-fw fa-cogs" title="Admin" title-url="admin">
 	<a href="admin/users" class="navbar-page-btn">
 		<i class="icon-gf icon-gf-users"></i>
-		Users
+		{{'Users'|translate}}
 	</a>
 </navbar>
 
 <div class="page-container">
 	<div class="page-header">
-		<h1>Users</h1>
+		<h1>{{'Users'|translate}}</h1>
 
 		<a class="btn btn-success" href="admin/users/create">
 			<i class="fa fa-plus"></i>
-			Add new user
+			{{'Add new user'|translate}}
 		</a>
 	</div>
 
 	<table class="filter-table form-inline">
 		<thead>
 			<tr>
-				<th>Id</th>
-				<th>Name</th>
-				<th>Login</th>
-				<th>Email</th>
-				<th style="white-space: nowrap">Grafana Admin</th>
+				<th>{{'Id'|translate}}</th>
+				<th>{{'Name'|translate}}</th>
+				<th>{{'Login'|translate}}</th>
+				<th>{{'Email'|translate}}</th>
+				<th style="white-space: nowrap">{{'Grafana Admin'|translate}}</th>
 				<th></th>
 			</tr>
 		</thead>
@@ -36,7 +36,7 @@
 				<td class="text-right">
 					<a href="admin/users/edit/{{user.id}}" class="btn btn-inverse btn-small">
 						<i class="fa fa-edit"></i>
-						Edit
+						{{'Edit'|translate}}
 					</a>
 					&nbsp;&nbsp;
 					<a ng-click="deleteUser(user)" class="btn btn-danger btn-small">
