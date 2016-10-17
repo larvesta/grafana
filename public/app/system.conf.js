@@ -19,7 +19,6 @@ System.config({
     "angular-dragdrop":       "vendor/angular-native-dragdrop/draganddrop.js",
     "angular-bindonce":       "vendor/angular-bindonce/bindonce.js",
     "angular-translate":       "vendor/angular-translate/angular-translate.min.js",
-    "angular-translate-loader-static-files":"vendor/angular-translate-loader-static-files/angular-translate-loader-static-files.js",
     "spectrum": "vendor/spectrum.js",
     "bootstrap-tagsinput": "vendor/tagsinput/bootstrap-tagsinput.js",
     "jquery.flot": "vendor/flot/jquery.flot",

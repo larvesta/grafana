@@ -10,7 +10,7 @@ import 'angular-dragdrop';
 import 'angular-bindonce';
 import 'angular-ui';
 import 'angular-translate';
-import 'angular-translate-loader-static-files';
+
 
 import $ from 'jquery';
 import angular from 'angular';
@@ -19,6 +19,14 @@ import _ from 'lodash';
 import moment from 'moment';
 import {coreModule} from './core/core';
 
+
+var TRANSLATE_EN = {
+  'GRANFANA_TITLE': 'grafana'
+};
+
+var TRANSLATE_ZH = {
+  'GRANFANA_TITLE': '翻译'
+};
 
 export class GrafanaApp {
   registerFunctions: any;
@@ -48,13 +56,6 @@ export class GrafanaApp {
     moment.locale(config.bootData.user.locale);
 
     app.config(($translateProvider,$locationProvider, $controllerProvider, $compileProvider, $filterProvider, $httpProvider, $provide) => {
-      //json文件路径
-      $translateProvider.useStaticFilesLoader({
-          prefix: 'app/translate/',
-          suffix: '.json'
-      });
-      //默认使用英文
-      $translateProvider.preferredLanguage('en');
 
       if (config.buildInfo.env !== 'development') {
         $compileProvider.debugInfoEnabled(false);
@@ -69,7 +70,7 @@ export class GrafanaApp {
       this.registerFunctions.filter     = $filterProvider.register;
 
       $provide.decorator("$http", ["$delegate", "$templateCache", function($delegate, $templateCache) {
-        var get = $delegate.get;
+        var get = $delegate.get;	
         $delegate.get = function(url, config) {
           if (url.match(/\.html$/)) {
             // some template's already exist in the cache
@@ -81,6 +82,11 @@ export class GrafanaApp {
         };
         return $delegate;
       }]);
+
+	  $translateProvider.translations('translate-zh', TRANSLATE_ZH);
+ 	  $translateProvider.translations('translate-en', TRANSLATE_EN);
+ 
+      $translateProvider.preferredLanguage('translate-zh');
     });
 
     this.ngModuleDependencies = [
