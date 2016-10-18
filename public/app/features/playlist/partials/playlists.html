@@ -6,14 +6,14 @@
     <h1>Saved playlists</h1>
     <a class="btn btn-success pull-right" href="playlists/create">
       <i class="fa fa-plus"></i>
-      New Playlist
+      {{'New Playlist'|translate}}
     </a>
   </div>
 
   <table class="filter-table" style="margin-top: 20px">
     <thead>
-      <th><strong>Name</strong></th>
-      <th><strong>Start url</strong></th>
+      <th><strong>{{'Name'|translate}}</strong></th>
+      <th><strong>{{'Url'|translate}}</strong></th>
       <th style="width: 68px"></th>
       <th style="width: 68px"></th>
       <th style="width: 25px"></th>
@@ -29,13 +29,13 @@
       <td class="text-center">
         <a href="playlists/play/{{playlist.id}}" class="btn btn-inverse btn-small">
           <i class="fa fa-play"></i>
-          Play
+          {{'Play'|translate}}
         </a>
       </td>
       <td  class="text-right">
         <a href="playlists/edit/{{playlist.id}}" class="btn btn-inverse btn-small">
           <i class="fa fa-edit"></i>
-          Edit
+          {{'Edit'|translate}}
         </a>
       </td>
       <td  class="text-right">

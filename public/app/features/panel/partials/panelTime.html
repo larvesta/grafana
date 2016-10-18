@@ -4,7 +4,7 @@
 			<i class="fa fa-clock-o"></i>
 		</span>
 
-		<span class="gf-form-label width-12">Override relative time</span>
+		<span class="gf-form-label width-12">{{'Override'|translate}} {{'relative time'|translate}}</span>
 		<span class="gf-form-label width-6">Last</span>
 
 		<input type="text" class="gf-form-input max-width-8" placeholder="1h"
@@ -16,8 +16,8 @@
 		<span class="gf-form-label">
 			<i class="fa fa-clock-o"></i>
 		</span>
-		<span class="gf-form-label width-12">Add time shift</span>
-		<span class="gf-form-label width-6">Amount</span>
+		<span class="gf-form-label width-12">{{'Add'|translate}} {{'time shift'|translate}}</span>
+		<span class="gf-form-label width-6">{{'Amount'|translate}}</span>
 		<input type="text" class="gf-form-input max-width-8" placeholder="1h"
 			empty-to-null ng-model="ctrl.panel.timeShift" valid-time-span
 			ng-change="ctrl.refresh()" ng-model-onblur></input>

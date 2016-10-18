@@ -1,19 +1,19 @@
 <div class="editor-row">
-	<h5 class="section-heading">Links and Dash Navigation</h5>
+	<h5 class="section-heading">{{'Links and Dash Navigation'|translate}}</h5>
 
 	<div ng-repeat="link in dashboard.links">
 
 		<div class="gf-form-group">
 			<div class="gf-form-inline">
 				<div class="gf-form">
-					<span class="gf-form-label width-6">Type</span>
+					<span class="gf-form-label width-6">{{'Type'|translate}}</span>
 					<div class="gf-form-select-wrapper width-10">
 						<select class="gf-form-input" ng-model="link.type" ng-options="f for f in ['dashboards','link']" ng-change="updated()"></select>
 					</div>
 				</div>
 
 				<div class="gf-form" ng-show="link.type === 'dashboards'">
-					<span class="gf-form-label">With tags</span>
+					<span class="gf-form-label">{{'Tags'|translate}}</span>
 					<bootstrap-tagsinput ng-model="link.tags" tagclass="label label-tag" placeholder="add tags"></bootstrap-tagsinput>
 				</div>
 
@@ -22,7 +22,7 @@
 				</div>
 
 				<div class="gf-form max-width-30" ng-show="link.type === 'link'">
-					<li class="gf-form-label width-6">Url</li>
+					<li class="gf-form-label width-6">{{'Url'|translate}}</li>
 					<input type="text" ng-model="link.url" class="gf-form-input" ng-model-onblur ng-change="updated()">
 				</div>
 
@@ -38,23 +38,23 @@
 			</div>
 
 			<div class="gf-form" ng-show="link.type === 'dashboards' && link.asDropdown">
-				<span class="gf-form-label width-6">Title</span>
+				<span class="gf-form-label width-6">{{'Title'|translate}}</span>
 				<input type="text" ng-model="link.title" class="gf-form-input max-width-25" ng-model-onblur ng-change="updated()">
 			</div>
 
 			<div class="gf-form-inline" ng-show="link.type === 'link'">
 				<div class="gf-form">
-					<span class="gf-form-label width-6">Title</span>
+					<span class="gf-form-label width-6">{{'Title'|translate}}</span>
 					<input type="text" ng-model="link.title" class="gf-form-input max-width-10" ng-model-onblur ng-change="updated()">
 				</div>
 
 				<div class="gf-form">
-					<span class="gf-form-label width-6">Tooltip</span>
+					<span class="gf-form-label width-6">{{'Tooltip'|translate}}</span>
 					<input type="text" ng-model="link.tooltip" class="gf-form-input max-width-10" placeholder="Open dashboard" ng-model-onblur ng-change="updated()">
 				</div>
 
 				<div class="gf-form">
-					<span class="gf-form-label width-6">Icon</span>
+					<span class="gf-form-label width-6">{{'Icon'|translate}}</span>
 					<div class="gf-form-select-wrapper max-width-10">
 						<select class="gf-form-input" ng-model="link.icon" ng-options="k as k for (k, v) in iconMap" ng-change="updated()"></select>
 					</div>
@@ -63,7 +63,7 @@
 
 			<div class="gf-form-inline">
 				<div class="gf-form">
-					<span class="gf-form-label width-6">Include</span>
+					<span class="gf-form-label width-6">{{'Include'|translate}}</span>
 					<editor-checkbox text="Time range" model="link.keepTime" change="updated()"></editor-checkbox>
 					<editor-checkbox text="Variable values" model="link.includeVars" change="updated()"></editor-checkbox>
 					<editor-checkbox text="Open in new tab " model="link.targetBlank" change="updated()"></editor-checkbox>
@@ -73,4 +73,4 @@
 	</div>
 </div>
 
-<button class="btn btn-inverse" ng-click="addLink()"><i class="fa fa-plus"></i> Add link</button>
+<button class="btn btn-inverse" ng-click="addLink()"><i class="fa fa-plus"></i> {{'Add'|translate}}</button>

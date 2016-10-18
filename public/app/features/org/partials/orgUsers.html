@@ -3,23 +3,23 @@
 
 <div class="page-container">
 	<div class="page-header">
-		<h1>Organization users</h1>
+		<h1>{{'Organization Users'|translate}}</h1>
 
 		<div class="page-header-tabs">
 			<button class="btn btn-success" ng-click="ctrl.openInviteModal()">
 				<i class="fa fa-plus"></i>
-				Add or Invite
+				{{'Add'|translate}} or {{'Invite'|translate}}
 			</button>
 
 			<ul class="gf-tabs">
 				<li class="gf-tabs-item">
 					<a class="gf-tabs-link" ng-click="ctrl.editor.index = 0" ng-class="{active: ctrl.editor.index === 0}">
-						Users ({{ctrl.users.length}})
+						{{'Users'|translate}} ({{ctrl.users.length}})
 					</a>
 				</li>
 				<li class="gf-tabs-item">
 					<a class="gf-tabs-link" ng-click="ctrl.editor.index = 1" ng-class="{active: ctrl.editor.index === 1}">
-						Pending Invitations ({{ctrl.pendingInvites.length}})
+						{{'Pending Invitations'|translate}} ({{ctrl.pendingInvites.length}})
 					</a>
 				</li>
 			</ul>
@@ -30,9 +30,9 @@
 		<table class="filter-table form-inline">
 			<thead>
 				<tr>
-					<th>Login</th>
-					<th>Email</th>
-					<th>Role</th>
+					<th>{{'Login'|translate}}</th>
+					<th>{{'Email'|translate}}</th>
+					<th>{{'Role'|translate}}</th>
 					<th style="width: 34px;"></th>
 				</tr>
 			</thead>
@@ -56,8 +56,8 @@
 		<table class="filter-table form-inline">
 			<thead>
 				<tr>
-					<th>Email</th>
-					<th>Name</th>
+					<th>{{'Email'|translate}}</th>
+					<th>{{'Name'|translate}}</th>
 					<th></th>
 				</tr>
 			</thead>
@@ -67,11 +67,11 @@
 					<td>{{invite.name}}</td>
 					<td class="text-right">
 						<button class="btn btn-inverse btn-mini " data-clipboard-text="{{invite.url}}" clipboard-button ng-click="ctrl.copyInviteToClipboard($event)">
-							<i class="fa fa-clipboard"></i> Copy Invite
+							<i class="fa fa-clipboard"></i> {{'Copy'|translate}}
 						</button>
 						&nbsp;
 						<button class="btn btn-inverse btn-mini">
-							Details
+              {{'Details'|translate}}
 							<i ng-show="!invite.expanded" class="fa fa-caret-right"></i>
 							<i ng-show="invite.expanded" class="fa fa-caret-down"></i>
 						</button>
@@ -82,10 +82,10 @@
 						<a href="{{invite.url}}">{{invite.url}}</a><br><br>
 						&nbsp;
 						<button class="btn btn-inverse btn-mini" ng-click="ctrl.revokeInvite(invite, $event)">
-							<i class="fa fa-remove" style="color: red"></i> Revoke invite
+							<i class="fa fa-remove" style="color: red"></i> {{'Revoke'|translate}}
 						</button>
 						<span style="padding-left: 15px">
-							Invited: <em> {{invite.createdOn | date: 'shortDate'}} by {{invite.invitedBy}} </em>
+							{{'Invited'|translate}}: <em> {{invite.createdOn | date: 'shortDate'}} by {{invite.invitedBy}} </em>
 						</span>
 					</td>
 				</tr>

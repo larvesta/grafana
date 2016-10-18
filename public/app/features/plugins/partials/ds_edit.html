@@ -4,14 +4,14 @@
 <div class="page-container">
 
   <div class="page-header">
-		<h1 ng-show="ctrl.isNew">Add data source</h1>
-		<h1 ng-hide="ctrl.isNew">Edit data source</h1>
+		<h1 ng-show="ctrl.isNew">{{'Add data source'|translate}}</h1>
+		<h1 ng-hide="ctrl.isNew">{{'Edit data source'|translate}}</h1>
 
 		<div class="page-header-tabs" ng-show="ctrl.hasDashboards">
 			<ul class="gf-tabs">
 				<li class="gf-tabs-item">
 					<a class="gf-tabs-link" ng-click="ctrl.tabIndex = 0" ng-class="{active: ctrl.tabIndex === 0}">
-					  Config
+					  {{'Edit'|translate}}
 					</a>
 				</li>
 				<li class="gf-tabs-item">
@@ -29,7 +29,7 @@
       <div class="gf-form-group">
         <div class="gf-form-inline">
 					<div class="gf-form">
-						<span class="gf-form-label width-7">Name</span>
+						<span class="gf-form-label width-7">{{'Name'|translate}}</span>
 						<input class="gf-form-input max-width-21" type="text" ng-model="ctrl.current.name" placeholder="My data source name" required>
 						<info-popover offset="0px -135px" mode="right-absolute">
 							The name is used when you select the data source in panels.
@@ -41,7 +41,7 @@
 				</div>
 
 				<div class="gf-form">
-					<span class="gf-form-label width-7">Type</span>
+					<span class="gf-form-label width-7">{{'Type'|translate}}</span>
 					<div class="gf-form-select-wrapper max-width-23">
 						<select class="gf-form-input" ng-model="ctrl.current.type" ng-options="v.id as v.name for v in ctrl.types" ng-change="ctrl.typeChanged()"></select>
 					</div>
@@ -62,12 +62,12 @@
 			</div>
 
 			<div class="gf-form-button-row">
-				<button type="submit" class="btn btn-success" ng-show="ctrl.isNew" ng-click="ctrl.saveChanges()">Add</button>
-				<button type="submit" class="btn btn-success" ng-show="!ctrl.isNew" ng-click="ctrl.saveChanges()">Save &amp; Test</button>
+				<button type="submit" class="btn btn-success" ng-show="ctrl.isNew" ng-click="ctrl.saveChanges()">{{'Add'|translate}}</button>
+				<button type="submit" class="btn btn-success" ng-show="!ctrl.isNew" ng-click="ctrl.saveChanges()">{{'Save'|translate}} &amp; {{'Test'|translate}}</button>
 				<button type="submit" class="btn btn-danger" ng-show="!ctrl.isNew" ng-click="ctrl.delete()">
-					Delete
+					{{'Delete'|translate}}
 				</button>
-				<a class="btn btn-link" href="datasources">Cancel</a>
+				<a class="btn btn-link" href="datasources">{{'Cancel'|translate}}</a>
 			</div>
 
 		</form>

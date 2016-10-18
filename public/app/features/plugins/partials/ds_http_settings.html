@@ -1,11 +1,11 @@
 
 
 <div class="gf-form-group">
-	<h3 class="page-heading">Http settings</h3>
+	<h3 class="page-heading">{{'Http settings'|translate}}</h3>
 
 	<div class="gf-form-inline">
 		<div class="gf-form max-width-30">
-			<span class="gf-form-label width-7">Url</span>
+			<span class="gf-form-label width-7">{{'Url'|translate}}</span>
 			<input class="gf-form-input" type="text"
 						 ng-model='current.url' placeholder="{{suggestUrl}}"
 						 bs-typeahead="getSuggestUrls"  min-length="0"
@@ -39,7 +39,7 @@
 
 	<div class="gf-form-inline">
 		<div class="gf-form">
-			<label class="gf-form-label width-7">Http Auth</label>
+			<label class="gf-form-label width-7">{{'Http Auth'|translate}}</label>
 		</div>
 		<gf-form-switch class="gf-form"
 									label="Basic Auth"
@@ -53,14 +53,14 @@
 
 	<div class="gf-form" ng-if="current.basicAuth">
 		<span class="gf-form-label width-7">
-			User
+    {{'User'|translate}}
 		</span>
 		<input class="gf-form-input max-width-21" type="text"  ng-model='current.basicAuthUser' placeholder="user" required></input>
 	</div>
 
 	<div class="gf-form" ng-if="current.basicAuth">
 		<span class="gf-form-label width-7">
-			Password
+			{{'Password'|translate}}
 		</span>
 		<input class="gf-form-input max-width-21" type="password" ng-model='current.basicAuthPassword' placeholder="password" required></input>
 	</div>

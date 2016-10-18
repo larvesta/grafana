@@ -2,7 +2,7 @@
 
 	<div class="modal-header">
 		<h2 class="modal-header-title">
-			Invite Users
+			{{'Invite Users'|translate}}
 		</h2>
 		<a class="modal-header-close" ng-click="dismiss();">
 			<i class="fa fa-remove"></i>
@@ -20,15 +20,15 @@
 			<div class="gf-form-group">
 				<div class="gf-form-inline" ng-repeat="invite in invites">
 					<div class="gf-form max-width-21">
-						<span class="gf-form-label">Email or Username</span>
+						<span class="gf-form-label">{{'Email'|translate}} or {{'Username'|translate}}</span>
 						<input type="text" ng-model="invite.loginOrEmail" required class="gf-form-input" placeholder="email@test.com">
 					</div>
 					<div class="gf-form max-width-14">
-						<span class="gf-form-label">Name</span>
+						<span class="gf-form-label">{{'Name'|translate}}</span>
 						<input type="text" ng-model="invite.name" class="gf-form-input" placeholder="name (optional)">
 					</div>
 					<div class="gf-form max-width-10">
-						<span class="gf-form-label">Role</span>
+						<span class="gf-form-label">{{'Role'|translate}}</span>
 						<select ng-model="invite.role" class="gf-form-input" ng-options="f for f in ['Viewer', 'Editor', 'Read Only Editor', 'Admin']">
 						</select>
 					</div>
@@ -44,7 +44,7 @@
 				<div class="gf-form">
 					<a class="btn btn-inverse btn-small" ng-click="addInvite()">
 						<i class="fa fa-plus"></i>
-						Invite another
+						{{'Invite another'|translate}}
 					</a>
 				</div>
 				<div class="gf-form">
@@ -53,8 +53,8 @@
 			</div>
 
 			<div class="gf-form-button-row">
-				<button type="submit" class="btn btn-success" ng-click="sendInvites();">Invite Users</button>
-				<a class="btn-text" ng-click="dismiss()">Cancel</a>
+				<button type="submit" class="btn btn-success" ng-click="sendInvites();">{{'Invite Users'|translate}}</button>
+				<a class="btn-text" ng-click="dismiss()">{{'Cancel'|translate}}</a>
 			</div>
 			<div class="clearfix"></div>
 		</form>

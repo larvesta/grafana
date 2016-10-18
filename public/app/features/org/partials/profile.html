@@ -3,43 +3,43 @@
 
 <div class="page-container">
 	<div class="page-header">
-		<h1>Profile</h1>
+		<h1>{{'Profile'|translate}}</h1>
 	</div>
 
 	<form name="ctrl.userForm" class="gf-form-group">
-		<h3 class="page-heading">Information</h3>
+		<h3 class="page-heading">{{'Details'|translate}}</h3>
 
 		<div class="gf-form">
-			<span class="gf-form-label width-9">Name</span>
+			<span class="gf-form-label width-9">{{'Name'|translate}}</span>
 			<input class="gf-form-input max-width-21" type="text" required ng-model="ctrl.user.name" >
 		</div>
 		<div class="gf-form">
-			<span class="gf-form-label width-9">Email</span>
+			<span class="gf-form-label width-9">{{'Email'|translate}}</span>
 			<input class="gf-form-input max-width-21" type="email" required ng-model="ctrl.user.email">
 		</div>
 		<div class="gf-form">
-			<span class="gf-form-label width-9">Username</span>
+			<span class="gf-form-label width-9">{{'Username'|translate}}</span>
 			<input class="gf-form-input max-width-21" type="text" required ng-model="ctrl.user.login">
 		</div>
 		<div class="gf-form-button-row">
-			<button type="submit" class="btn btn-success" ng-click="ctrl.update()">Update</button>
+			<button type="submit" class="btn btn-success" ng-click="ctrl.update()">{{'Update'|translate}}</button>
 		</div>
 	</form>
 
 	<prefs-control mode="user"></prefs-control>
 
-	<h3 class="page-heading">Password</h3>
+	<h3 class="page-heading">{{'Password'|translate}}</h3>
 	<div class="gf-form-group">
-		<a href="profile/password" class="btn btn-inverse">Change Password</a>
+		<a href="profile/password" class="btn btn-inverse">{{'Change password'|translate}}</a>
 	</div>
 
-	<h3 class="page-heading">Organizations</h3>
+	<h3 class="page-heading">{{'Organizations'|translate}}</h3>
 	<div class="gf-form-group">
 		<table class="filter-table form-inline">
 			<thead>
 				<tr>
-					<th>Name</th>
-					<th>Role</th>
+					<th>{{'Name'|translate}}</th>
+					<th>{{'Role'|translate}}</th>
 					<th></th>
 				</tr>
 			</thead>
@@ -49,10 +49,10 @@
 					<td>{{org.role}}</td>
 					<td class="text-right">
 						<span class="btn btn-primary btn-mini" ng-show="org.orgId === contextSrv.user.orgId">
-							Current
+							{{'Current'|translate}}
 						</span>
 						<a ng-click="ctrl.setUsingOrg(org)" class="btn btn-inverse btn-mini" ng-show="org.orgId !== contextSrv.user.orgId">
-							Select
+							{{'Select'|translate}}
 						</a>
 					</td>
 				</tr>

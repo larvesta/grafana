@@ -1,12 +1,12 @@
 <div ng-controller="GraphiteImportCtrl" ng-init="init()">
 
 	<div ng-if="datasources.length > 0">
-		<h2 class="page-heading">Load dashboard from Graphite-Web</h2>
+		<h2 class="page-heading">{{'Load dashboard from Graphite-Web'|translate}}</h2>
 
 		<div class="gf-form-group">
 			<div class="gf-form-inline">
 				<div class="gf-form">
-					<span class="gf-form-label width-10">Data source</span>
+					<span class="gf-form-label width-10">{{'Datasource'|translate}}</span>
 				</div>
 				<div class="gf-form">
 					<div class="gf-form-select-wrapper">
@@ -15,7 +15,7 @@
 					</div>
 				</div>
 				<div class="gf-form">
-					<button class="btn btn-success pull-right" ng-click="listAll()">List dashboards</button>
+					<button class="btn btn-success pull-right" ng-click="listAll()">{{'List dashboards'|translate}}</button>
 				</div>
 			</div>
 		</div>
@@ -25,7 +25,7 @@
 				<td style="">{{dash.name}}</td>
 				<td>
 					<button class="btn btn-inverse pull-right" ng-click="import(dash.name)">
-						Load
+						{{'Load'|translate}}
 					</button>
 				</td>
 			</tr>

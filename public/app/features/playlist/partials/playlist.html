@@ -3,19 +3,17 @@
 
 <div class="page-container" ng-form="playlistEditForm">
 	<div class="page-header">
-		<h1 ng-show="ctrl.isNew()">New Playlist</h1>
-		<h1 ng-show="!ctrl.isNew()">Edit Playlist</h1>
+		<h1 ng-show="ctrl.isNew()">{{'New Playlist'|translate}}</h1>
+		<h1 ng-show="!ctrl.isNew()">{{'Edit Playlist'|translate}}</h1>
 	</div>
-
-	<p class="playlist-description">A playlist rotates through a pre-selected list of Dashboards. A Playlist can be a great way to build situational awareness, or just show off your metrics to your team or visitors.</p>
 
 	<div class="gf-form-group">
 		<div class="gf-form">
-			<span class="gf-form-label width-7">Name</span>
+			<span class="gf-form-label width-7">{{'Name'|translate}}</span>
 			<input type="text" required ng-model="ctrl.playlist.name" class="gf-form-input max-width-21">
 		</div>
 		<div class="gf-form">
-			<span class="gf-form-label width-7">Interval</span>
+			<span class="gf-form-label width-7">{{'Interval'|translate}}</span>
 			<input type="text" required ng-model="ctrl.playlist.interval" placeholder="5m" class="gf-form-input max-width-21">
 		</div>
 	</div>
@@ -28,7 +26,7 @@
 		<div class="col-md-6">
 			<div class="playlist-search-containerwrapper">
 				<div class="max-width-32">
-					<h5 class="page-headering playlist-column-header">Available</h5>
+					<h5 class="page-headering playlist-column-header">{{'Available'|translate}}</h5>
 					<div style="">
 						<playlist-search class="playlist-search-container" search-started="ctrl.searchStarted(promise)"></playlist-search>
 					</div>
@@ -46,7 +44,7 @@
 						<td class="add-dashboard">
 							<button class="btn btn-inverse btn-mini pull-right" ng-click="ctrl.addPlaylistItem(playlistItem)">
 								<i class="fa fa-plus"></i>
-								Add to playlist
+								{{'Add to playlist'|translate}}
 							</button>
 						</td>
 					</tr>
@@ -64,7 +62,7 @@
 						<td class="add-dashboard">
 							<button class="btn btn-inverse btn-mini pull-right" ng-click="ctrl.addTagPlaylistItem(tag)">
 								<i class="fa fa-plus"></i>
-								Add to playlist
+								{{'Add to playlist'|translate}}
 							</button>
 						</td>
 					</tr>
@@ -107,10 +105,10 @@
 	<div class="gf-form-button-row">
 		<a class="btn btn-success " ng-show="ctrl.isNew()"
 			ng-disabled="ctrl.playlistEditForm.$invalid || ctrl.isPlaylistEmpty()"
-			ng-click="ctrl.savePlaylist(ctrl.playlist, ctrl.playlistItems)">Create new playlist</a>
+			ng-click="ctrl.savePlaylist(ctrl.playlist, ctrl.playlistItems)">{{'Add'|translate}}</a>
 		<a class="btn btn-success" ng-show="!ctrl.isNew()"
 			ng-disabled="ctrl.playlistEditForm.$invalid || ctrl.isPlaylistEmpty()"
-			ng-click="ctrl.savePlaylist(ctrl.playlist, ctrl.playlistItems)">Save</a>
-		<a class="btn-text" ng-click="ctrl.backToList()">Cancel</a>
+			ng-click="ctrl.savePlaylist(ctrl.playlist, ctrl.playlistItems)">{{'Save'|translate}}</a>
+		<a class="btn-text" ng-click="ctrl.backToList()">{{'Cancel'|translate}}</a>
 	</div>
 </div>

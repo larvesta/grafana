@@ -22,7 +22,7 @@
 					<span class="gf-form-label width-7" ng-show="link.type === 'dashboard'">Dashboard</span>
 					<input ng-show="link.type === 'dashboard'" type="text" ng-model="link.dashboard" bs-typeahead="searchDashboards" class="gf-form-input max-width-14" ng-blur="dashboardChanged(link)">
 
-					<span class="gf-form-label width-7" ng-show="link.type === 'absolute'">Url</span>
+					<span class="gf-form-label width-7" ng-show="link.type === 'absolute'">{{'Url'|translate}}</span>
 					<input ng-show="link.type === 'absolute'" type="text" ng-model="link.url" class="gf-form-input max-width-14">
 				</div>
 
@@ -37,12 +37,12 @@
 				</div>
 
 				<div class="gf-form">
-					<div class="gf-form-label width-7">Title</div>
+					<div class="gf-form-label width-7">{{'Title'|translate}}</div>
 					<input type="text" ng-model="link.title" class="gf-form-input">
 				</div>
 
 				<div class="gf-form">
-					<span class="gf-form-label width-7">Url params</span>
+					<span class="gf-form-label width-7">{{'Url params'|translate}}</span>
 					<input type="text" ng-model="link.params" class="gf-form-input">
 				</div>
 			</div>
@@ -63,5 +63,5 @@
 </div>
 
 <div class="editor-row">
-	<button class="btn btn-inverse" ng-click="addLink()"><i class="fa fa-plus"></i> Add link</button>
+	<button class="btn btn-inverse" ng-click="addLink()"><i class="fa fa-plus"></i> {{'Add'|translate}}</button>
 </div>

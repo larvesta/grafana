@@ -31,16 +31,16 @@
 			</a>
 			<ul class="dropdown-menu pull-right" role="menu">
 				<li role="menuitem" ng-if="ctrl.hasTextEditMode">
-					<a tabindex="1" ng-click="ctrl.toggleEditorMode()">Toggle Edit Mode</a>
+					<a tabindex="1" ng-click="ctrl.toggleEditorMode()">{{'Toggle Edit Mode'|translate}}</a>
 				</li>
 				<li role="menuitem">
-					<a tabindex="1" ng-click="ctrl.duplicateQuery()">Duplicate</a>
+					<a tabindex="1" ng-click="ctrl.duplicateQuery()">{{'Copy'|translate}}</a>
 				</li>
 				<li role="menuitem">
-					<a tabindex="1" ng-click="ctrl.moveQuery(-1)">Move up</a>
+					<a tabindex="1" ng-click="ctrl.moveQuery(-1)">{{'Move up'|translate}}</a>
 				</li>
 				<li role="menuitem">
-					<a tabindex="1" ng-click="ctrl.moveQuery(1)">Move down</a>
+					<a tabindex="1" ng-click="ctrl.moveQuery(1)">{{'Move down'|translate}}</a>
 				</li>
 			</ul>
 		</label>
@@ -79,13 +79,13 @@
 				</a>
 				<ul class="dropdown-menu pull-right" role="menu">
 					<li role="menuitem">
-						<a tabindex="1" ng-click="ctrl.duplicateQuery()">Duplicate</a>
+						<a tabindex="1" ng-click="ctrl.duplicateQuery()">{{'Copy'|translate}}</a>
 					</li>
 					<li role="menuitem">
-						<a tabindex="1" ng-click="ctrl.moveQuery(-1)">Move up</a>
+						<a tabindex="1" ng-click="ctrl.moveQuery(-1)">{{'Move up'|translate}}</a>
 					</li>
 					<li role="menuitem">
-						<a tabindex="1" ng-click="ctrl.moveQuery(1)">Move down</a>
+						<a tabindex="1" ng-click="ctrl.moveQuery(1)">{{'Move down'|translate}}</a>
 					</li>
 				</ul>
 			</div>

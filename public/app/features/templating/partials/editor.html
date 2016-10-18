@@ -1,22 +1,22 @@
 <div ng-controller="TemplateEditorCtrl" ng-init="init()">
 	<div class="tabbed-view-header">
 		<h2 class="tabbed-view-title">
-			Templating
+			{{'Templating'|translate}}
 		</h2>
 
 		<ul class="gf-tabs">
 			<li class="gf-tabs-item" >
 				<a class="gf-tabs-link" ng-click="mode = 'list';" ng-class="{active: mode === 'list'}">
-					Variables
+					{{'Variables'|translate}}
 				</a>
 			</li>
 			<li class="gf-tabs-item" ng-show="mode === 'edit'">
 				<a class="gf-tabs-link" ng-class="{active: mode === 'edit'}">
-					Edit
+					{{'Edit'|translate}}
 				</a>
 			</li>
 			<li class="gf-tabs-item" ng-show="mode === 'new'">
-				<span class="active gf-tabs-link">New</span>
+				<span class="active gf-tabs-link">{{'Add'|translate}}</span>
 			</li>
 		</ul>
 
@@ -28,9 +28,6 @@
 	<div class="tabbed-view-body">
 
 		<div ng-if="mode === 'list'">
-			<div ng-if="variables.length === 0">
-				<em>No template variables defined</em>
-			</div>
 			<table class="grafana-options-table">
 				<tr ng-repeat="variable in variables">
 					<td style="width: 1%">
@@ -46,13 +43,13 @@
 					<td style="width: 1%"><i ng-click="_.move(variables,$index,$index+1)" ng-hide="$last" class="pointer fa fa-arrow-down"></i></td>
 					<td style="width: 1%">
             <a ng-click="duplicate(variable)" class="btn btn-inverse btn-mini">
-              Duplicate
+              {{'Copy'|translate}}
             </a>
           </td>
 					<td style="width: 1%">
 						<a ng-click="edit(variable)" class="btn btn-inverse btn-mini">
 							<i class="fa fa-edit"></i>
-							Edit
+							{{'Edit'|translate}}
 						</a>
 					</td>
 					<td style="width: 1%">
@@ -66,21 +63,21 @@
 
 		<div class="gf-form" ng-show="mode === 'list'">
 			<div class="gf-form-button-row">
-				<a type="button" class="btn gf-form-button btn-success" ng-click="mode = 'new';"><i class="fa fa-plus" ></i>&nbsp;&nbsp;New</a>
+				<a type="button" class="btn gf-form-button btn-success" ng-click="mode = 'new';"><i class="fa fa-plus" ></i>&nbsp;&nbsp;{{'Add'|translate}}</a>
 			</div>
 		</div>
 
 		<div ng-if="mode === 'edit' || mode === 'new'">
-			<h5 class="section-heading">Variable</h5>
+			<h5 class="section-heading">{{'Variable'|translate}}</h5>
 			<div class="gf-form-group">
 				<div class="gf-form-inline">
 					<div class="gf-form max-width-19">
-						<span class="gf-form-label width-6">Name</span>
+						<span class="gf-form-label width-6">{{'Name'|translate}}</span>
 						<input type="text" class="gf-form-input" placeholder="name" ng-model='current.name'></input>
 					</div>
 					<div class="gf-form max-width-19">
 						<span class="gf-form-label width-6">
-              Type
+              {{'Type'|translate}}
               <info-popover mode="right-normal">
                 <dl>
                   <dt>Query</dt>
@@ -172,7 +169,7 @@
           </div>
           <div class="gf-form max-width-21">
             <span class="gf-form-label width-7">
-              Refresh
+              {{'Refresh'|translate}}
               <info-popover mode="right-normal">
                 When to update the values of this variable.
               </info-popover>
@@ -183,7 +180,7 @@
           </div>
         </div>
         <div class="gf-form">
-          <span class="gf-form-label width-7">Query</span>
+          <span class="gf-form-label width-7">{{'Query'|translate}}</span>
           <input type="text" class="gf-form-input" ng-model='current.query' placeholder="metric name or tags query" ng-model-onblur ng-change="runQuery()"></input>
         </div>
         <div class="gf-form">
@@ -201,7 +198,7 @@
         <h5 class="section-heading">Data source options</h5>
 
         <div class="gf-form">
-          <label class="gf-form-label width-12">Type</label>
+          <label class="gf-form-label width-12">{{'Type'|translate}}</label>
           <div class="gf-form-select-wrapper max-width-18">
             <select class="gf-form-input" ng-model="current.query" ng-options="f.value as f.text for f in datasourceTypes" ng-change="runQuery()"></select>
           </div>
@@ -223,7 +220,7 @@
       </div>
 
       <div class="section gf-form-group" ng-show="showSelectionOptions()">
-        <h5 class="section-heading">Selection Options</h5>
+        <h5 class="section-heading">{{'Selection Options'|translate}}</h5>
         <div class="section">
           <gf-form-switch class="gf-form"
                           label="Multi-value"
@@ -261,7 +258,7 @@
       </div>
 
       <div class="gf-form-group">
-        <h5>Preview of values (shows max 20)</h5>
+        <h5>{{'Preview of values (shows max 20)'|translate}}</h5>
         <div class="gf-form-inline">
           <div class="gf-form" ng-repeat="option in current.options | limitTo: 20">
             <span class="gf-form-label">{{option.text}}</span>
@@ -271,8 +268,8 @@
     </div>
 
     <div class="gf-form-button-row p-y-0">
-      <button type="button" class="btn btn-success" ng-show="mode === 'edit'" ng-click="update();">Update</button>
-      <button type="button" class="btn btn-success" ng-show="mode === 'new'" ng-click="add();">Add</button>
+      <button type="button" class="btn btn-success" ng-show="mode === 'edit'" ng-click="update();">{{'Update'|translate}}</button>
+      <button type="button" class="btn btn-success" ng-show="mode === 'new'" ng-click="add();">{{'Add'|translate}}</button>
     </div>
   </div>
 </div>
