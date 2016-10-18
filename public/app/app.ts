@@ -115,6 +115,9 @@ var TRANSLATE_EN = {
   'Timezone': 'Timezone',
   'Toggles': 'Toggles',
   'Rows settings': 'Rows settings',
+  'Row editor': 'Row editor',
+  'Delete row': 'Delete row',
+  'ADD ROW': 'ADD ROW',
   'Title': 'Title',
   'Dashboard info': 'Dashboard info',
   'Last updated at': 'Last updated at',
@@ -166,6 +169,8 @@ var TRANSLATE_EN = {
   'Toggle Edit Mode': 'Toggle Edit Mode',
   'Move up': 'Move up',
   'Move down': 'Move down',
+  'Move to top': 'Move to top',
+  'Move to bottom': 'Move to bottom',
   'Url params': 'Url params',
   'Add to playlist': 'Add to playlist',
   'Available': 'Available',
@@ -201,7 +206,15 @@ var TRANSLATE_EN = {
   'Refresh': 'Refresh',
   'Query': 'Query',
   'Press enter to add a tag': 'Press enter to add a tag',
-  'Shared Crosshair': 'Shared Crosshair'
+  'Shared Crosshair': 'Shared Crosshair',
+  'Find dashboards on': 'Find dashboards on',
+  'Sign in': 'Sign in',
+  'Sign up': 'Sign up',
+  'Pin': 'Pin',
+  'Add Panel': 'Add Panel',
+  'Set height': 'Set height',
+  'Move': 'Move',
+  'Drop': 'Drop'
 };
 
 var TRANSLATE_ZH = {
@@ -300,6 +313,9 @@ var TRANSLATE_ZH = {
   'Timezone': '时区',
   'Toggles': '状态切换',
   'Rows settings': '栅格配置',
+  'Row editor': '栅格编辑',
+  'Delete row': '删除栅格',
+  'ADD ROW': '添加栅格',
   'Title': '标题',
   'Dashboard info': 'Dashboard信息',
   'Last updated at': '上次更新时间',
@@ -351,6 +367,8 @@ var TRANSLATE_ZH = {
   'Toggle Edit Mode': '切换编辑模式',
   'Move up': '上移',
   'Move down': '下移',
+  'Move to top': '移到顶部',
+  'Move to bottom': '移动底部',
   'Url params': 'Url参数',
   'Add to playlist': '添加到列表',
   'Available': '可用项目',
@@ -386,7 +404,15 @@ var TRANSLATE_ZH = {
   'Refresh': '刷新',
   'Query': '查询',
   'Press enter to add a tag': '回车添加标签',
-  'Shared Crosshair': '共享的准星'
+  'Shared Crosshair': '共享的准星',
+  'Find dashboards on': '查找dashboards',
+  'Sign in': '登陆',
+  'Sign up': '注册',
+  'Pin': '锁定侧边栏',
+  'Add Panel': '创建面板',
+  'Set height': '设置高度',
+  'Move': '移动',
+  'Drop': '放弃'
 };
 
 export class GrafanaApp {

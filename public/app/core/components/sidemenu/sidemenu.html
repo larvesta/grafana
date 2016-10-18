@@ -57,14 +57,14 @@
 	<li ng-show="::!ctrl.isSignedIn">
     <a href="{{ctrl.loginUrl}}" class="sidemenu-item" target="_self">
 			<span class="icon-circle sidemenu-icon"><i class="fa fa-fw fa-sign-in"></i></span>
-			<span class="sidemenu-item-text">Sign in</span>
+			<span class="sidemenu-item-text">{{'Sign in'|translate}}</span>
 		</a>
 	</li>
 
 	<li>
 		<a class="sidemenu-item" target="_self" ng-hide="ctrl.contextSrv.pinned" ng-click="ctrl.contextSrv.setPinnedState(true)">
 			<span class="icon-circle sidemenu-icon"><i class="fa fa-fw fa-thumb-tack"></i></span>
-			<span class="sidemenu-item-text">Pin</span>
+			<span class="sidemenu-item-text">{{'Pin'|translate}}</span>
 		</a>
 	</li>
 </ul>

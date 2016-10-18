@@ -8,11 +8,11 @@
 			<i class="fa fa-filter"></i>
 			<a class="pointer" href="javascript:void 0;" ng-click="ctrl.showStarred()" tabindex="2">
 				<i class="fa fa-remove" ng-show="ctrl.query.starred"></i>
-				starred
+				{{'starred'|translate}}
 			</a> |
 			<a class="pointer" href="javascript:void 0;" ng-click="ctrl.getTags()" tabindex="3">
 				<i class="fa fa-remove" ng-show="ctrl.tagsMode"></i>
-				tags
+				{{'Tags'|translate}}
 			</a>
 			<span ng-if="ctrl.query.tag.length">
 				|
@@ -64,16 +64,16 @@
 	<div class="search-button-row">
 		<a class="btn btn-inverse pull-left" href="dashboard/new" ng-show="ctrl.contextSrv.isEditor" ng-click="ctrl.isOpen = false;">
 			<i class="fa fa-plus"></i>
-			Create New
+			{{'Add'|translate}}
 		</a>
 
 		<a class="btn btn-inverse pull-left" href="dashboard/new/?editview=import" ng-show="ctrl.contextSrv.isEditor" ng-click="ctrl.isOpen = false;">
 			<i class="fa fa-upload"></i>
-			Import
+			{{'Import'|translate}}
 		</a>
 
 		<a class="pull-right search-button-row-explore-link" target="_blank" href="https://grafana.net/dashboards?utm_source=grafana_search">
-      Find dashboards on
+      {{'Find dashboards on'|translate}}
 		</a>
 
  		<div class="clearfix"></div>

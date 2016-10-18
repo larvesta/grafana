@@ -10,25 +10,25 @@
     <div class="login-inner-box">
 			<div class="login-tab-header">
 				<button class="btn-login-tab" ng-click="loginMode = true;" ng-class="{active: loginMode}">
-					{{ 'GRANFANA_TITLE'|translate }}
+					{{ 'Sign in'|translate }}
 				</button>
 				<button class="btn-login-tab" ng-click="loginMode = false;" ng-class="{active: !loginMode}" ng-show="!disableUserSignUp">
-					Sign up
+					{{'Sign up'|translate}}
 				</button>
 			</div>
 
       <form name="loginForm" class="login-form gf-form-group" ng-show="allowUserPassLogin">
 				<div class="gf-form" ng-if="loginMode">
-					<span class="gf-form-label width-7">User</span>
+					<span class="gf-form-label width-7">{{'User'|translate}}</span>
 					<input type="text" name="username" class="gf-form-input max-width-14" required ng-model='formModel.user' placeholder={{loginHint}}>
 				</div>
 				<div class="gf-form" ng-if="loginMode">
-					<span class="gf-form-label width-7">Password</span>
+					<span class="gf-form-label width-7">{{'Password'|translate}}</span>
 					<input type="password" name="password" class="gf-form-input max-width-14" required ng-model="formModel.password" id="inputPassword" placeholder="password">
 				</div>
 
 				<div class="gf-form" ng-if="!loginMode">
-						<span class="gf-form-label width-7">Email</span>
+						<span class="gf-form-label width-7">{{'Email'|translate}}</span>
 						<input type="email" class="gf-form-input max-width-14" required ng-model='formModel.email' placeholder="email">
 				</div>
 
