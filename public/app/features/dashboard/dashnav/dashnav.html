@@ -21,7 +21,7 @@
 		</a>
 	</li>
 	<li ng-if="contextSrv.isGrafanaAdmin && dashboardMeta.canShare" class="dropdown">
-		<a class="pointer" ng-click="hideTooltip($event)" bs-tooltip="'Share dashboard'" data-placement="bottom" data-toggle="dropdown"><i class="fa fa-share-square-o"></i></a>
+		<a class="pointer" ng-click="hideTooltip($event)" bs-tooltip="'共享dashboard'" data-placement="bottom" data-toggle="dropdown"><i class="fa fa-share-square-o"></i></a>
 		<ul class="dropdown-menu">
 			<li>
 				<a class="pointer" ng-click="shareDashboard(0)">

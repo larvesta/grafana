@@ -243,7 +243,8 @@ var TRANSLATE_EN = {
   'Save dashboard': 'Save dashboard',
   'Open original dashboard': 'Open original dashboard',
   'No matching': 'No matching',
-  'Max shown': 'Max shown'
+  'Max shown': 'Max shown',
+  'Edit': 'Edit'
 };
 
 var TRANSLATE_ZH = {
@@ -470,7 +471,8 @@ var TRANSLATE_ZH = {
   'Save dashboard': '保存dashboard',
   'Open original dashboard': '打开原始dashboard',
   'No matching': '无符合记录',
-  'Max shown': '最大显示'
+  'Max shown': '最大显示',
+  'Edit': '編輯'
 };
 
 export class GrafanaApp {
