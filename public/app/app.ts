@@ -62,7 +62,7 @@ var TRANSLATE_EN = {
   'Total dashboard tags': 'Total dashboard tags',
   'Total starred dashboards': 'Total starred dashboards',
   'Login': 'Login',
-  'Grafana Admin': 'Grafana Admin',
+  'Admin': 'Admin',
   'Adding an Alert': 'Adding an Alert',
   'Go to Home Dashboard': 'Go to Home Dashboard',
   'How to add an alert': 'How to add an alert',
@@ -241,7 +241,9 @@ var TRANSLATE_EN = {
   'Manage dashboard': 'Manage dashboard',
   'Open editView of dashboard': 'Open editView of dashboard',
   'Save dashboard': 'Save dashboard',
-  'Open original dashboard': 'Open original dashboard'
+  'Open original dashboard': 'Open original dashboard',
+  'No matching': 'No matching',
+  'Max shown': 'Max shown'
 };
 
 var TRANSLATE_ZH = {
@@ -287,7 +289,7 @@ var TRANSLATE_ZH = {
   'Total dashboard tags': 'dashboards标签数量',
   'Total starred dashboards': '受关注dashboards数量',
   'Login': '登录号',
-  'Grafana Admin': '管理员',
+  'Admin': '管理员',
   'Adding an Alert': '添加告警',
   'Go to Home Dashboard': '跳转到HOME页面',
   'How to add an alert': '怎样添加一条告警',
@@ -466,7 +468,9 @@ var TRANSLATE_ZH = {
   'Manage dashboard': 'dashboard管理',
   'Open editView of dashboard': '打开dashboard编辑视图',
   'Save dashboard': '保存dashboard',
-  'Open original dashboard': '打开原始dashboard'
+  'Open original dashboard': '打开原始dashboard',
+  'No matching': '无符合记录',
+  'Max shown': '最大显示'
 };
 
 export class GrafanaApp {

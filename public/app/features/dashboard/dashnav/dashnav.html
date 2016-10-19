@@ -41,19 +41,19 @@
 		</ul>
 	</li>
 	<li ng-show="::dashboardMeta.canSave">
-		<a ng-click="saveDashboard()" bs-tooltip='{{"Save dashboard "|translate}}' data-placement="bottom"><i class="fa fa-save"></i></a>
+		<a ng-click="saveDashboard()" bs-tooltip="'保存dashboard'" data-placement="bottom"><i class="fa fa-save"></i></a>
 	</li>
   <li ng-if="!contextSrv.isGrafanaAdmin && dashboardMeta.canEdit">
-		<a ng-click="openEditView('settings');" bs-tooltip='{{"Open editView of dashboard"|translate}}' data-placement="bottom"><i class="fa fa-edit"></i></a>
+		<a ng-click="openEditView('settings');" bs-tooltip="'打开dashboard编辑视图'" data-placement="bottom"><i class="fa fa-edit"></i></a>
 	</li>
   <li ng-if="!contextSrv.isGrafanaAdmin && dashboardMeta.canEdit">
-		<a ng-click="hideDashboardControls();" bs-tooltip='{{"Hide or Show controls"|translate}}' data-placement="bottom"><i class="fa fa-exchange"></i></a>
+		<a ng-click="hideDashboardControls();" bs-tooltip="'显示/隐藏dashboard侧边窗'" data-placement="bottom"><i class="fa fa-exchange"></i></a>
 	</li>
 	<li ng-if="dashboard.snapshot.originalUrl">
-		<a ng-href="{{dashboard.snapshot.originalUrl}}" bs-tooltip='{{"Open original dashboard"|translate}}' data-placement="bottom"><i class="fa fa-link"></i></a>
+		<a ng-href="{{dashboard.snapshot.originalUrl}}" bs-tooltip="'打开原始dashboard'" data-placement="bottom"><i class="fa fa-link"></i></a>
 	</li>
 	<li ng-if="contextSrv.isGrafanaAdmin && showSettingsMenu" class="dropdown">
-		<a class="pointer" ng-click="hideTooltip($event)" bs-tooltip='{{"Manage dashboard"|translate}}' data-placement="bottom" data-toggle="dropdown"><i class="fa fa-cog"></i></a>
+		<a class="pointer" ng-click="hideTooltip($event)" bs-tooltip="'管理dashboard'" data-placement="bottom" data-toggle="dropdown"><i class="fa fa-cog"></i></a>
 		<ul class="dropdown-menu">
 			<li ng-if="dashboardMeta.canEdit"><a class="pointer" ng-click="openEditView('settings');"><i class="fa fa-edit"></i>{{'Edit'|translate}}</a></li>
 			<li ng-if="dashboardMeta.canEdit"><a class="pointer" ng-click="openEditView('annotations');"><i class="fa fa-info-circle"></i>{{'Annotations'|translate}}</a></li>

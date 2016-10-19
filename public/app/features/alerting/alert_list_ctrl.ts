@@ -11,12 +11,12 @@ export class AlertListCtrl {
 
   alerts: any;
   stateFilters = [
-    {text: 'All', value: null},
-    {text: 'OK', value: 'ok'},
-    {text: 'Pending', value: 'pending'},
-    {text: 'Warning', value: 'warning'},
-    {text: 'Critical', value: 'critical'},
-    {text: 'Execution Error', value: 'execution_error'},
+    {text: '所有', value: null},
+    {text: '正常', value: 'ok'},
+    {text: '未决', value: 'pending'},
+    {text: '警告', value: 'warning'},
+    {text: '严重', value: 'critical'},
+    {text: '执行错误', value: 'execution_error'},
   ];
 
   filters = {

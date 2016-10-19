@@ -21,7 +21,7 @@ export class DashboardSelectorCtrl {
   }
 
   $onInit() {
-    this.options = [{value: 0, text: 'Default'}];
+    this.options = [{value: 0, text: '默认'}];
 
     return this.backendSrv.search({starred: true}).then(res => {
       res.forEach(dash => {

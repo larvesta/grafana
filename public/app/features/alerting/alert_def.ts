@@ -42,43 +42,43 @@ function createReducerPart(model) {
 }
 
 var severityLevels = {
-  'critical': {text: 'Critical', iconClass: 'icon-gf icon-gf-critical', stateClass: 'alert-state-critical'},
-  'warning': {text: 'Warning', iconClass: 'icon-gf icon-gf-warning', stateClass: 'alert-state-warning'},
+  'critical': {text: '严重', iconClass: 'icon-gf icon-gf-critical', stateClass: 'alert-state-critical'},
+  'warning': {text: '警告', iconClass: 'icon-gf icon-gf-warning', stateClass: 'alert-state-warning'},
 };
 
 function getStateDisplayModel(state) {
   switch (state) {
     case 'ok': {
       return {
-        text: 'OK',
+        text: '正常',
         iconClass: 'icon-gf icon-gf-online',
         stateClass: 'alert-state-ok'
       };
     }
     case 'critical': {
       return {
-        text: 'CRITICAL',
+        text: '严重',
         iconClass: 'icon-gf icon-gf-critical',
         stateClass: 'alert-state-critical'
       };
     }
     case 'warning': {
       return {
-        text: 'WARNING',
+        text: '警告',
         iconClass: 'icon-gf icon-gf-warning',
         stateClass: 'alert-state-warning'
       };
     }
     case 'pending': {
       return {
-        text: 'PENDING',
+        text: '未决',
         iconClass: "fa fa-question",
         stateClass: 'alert-state-warning'
       };
     }
     case 'execution_error': {
       return {
-        text: 'EXECUTION ERROR',
+        text: '执行错误',
         iconClass: 'icon-gf icon-gf-critical',
         stateClass: 'alert-state-critical'
       };
@@ -86,7 +86,7 @@ function getStateDisplayModel(state) {
 
     case 'paused': {
       return {
-        text: 'paused',
+        text: '暂停',
         iconClass: "fa fa-pause",
         stateClass: 'alert-state-paused'
       };
