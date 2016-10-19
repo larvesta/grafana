@@ -73,15 +73,15 @@ func setIndexViewData(c *middleware.Context) (*dtos.IndexViewData, error) {
 	}
 
 	dashboardChildNavs := []*dtos.NavLink{
-		{Text: "Home", Url: setting.AppSubUrl + "/"},
-		{Text: "Playlists", Url: setting.AppSubUrl + "/playlists"},
-		{Text: "Snapshots", Url: setting.AppSubUrl + "/dashboard/snapshots"},
+		{Text: "主页", Url: setting.AppSubUrl + "/"},
+		{Text: "列表", Url: setting.AppSubUrl + "/playlists"},
+		{Text: "快照", Url: setting.AppSubUrl + "/dashboard/snapshots"},
 	}
 
 	if c.OrgRole == m.ROLE_ADMIN || c.OrgRole == m.ROLE_EDITOR {
 		dashboardChildNavs = append(dashboardChildNavs, &dtos.NavLink{Divider: true})
-		dashboardChildNavs = append(dashboardChildNavs, &dtos.NavLink{Text: "New", Icon: "fa fa-plus", Url: setting.AppSubUrl + "/dashboard/new"})
-		dashboardChildNavs = append(dashboardChildNavs, &dtos.NavLink{Text: "Import", Icon: "fa fa-download", Url: setting.AppSubUrl + "/dashboard/new/?editview=import"})
+		dashboardChildNavs = append(dashboardChildNavs, &dtos.NavLink{Text: "新建", Icon: "fa fa-plus", Url: setting.AppSubUrl + "/dashboard/new"})
+		dashboardChildNavs = append(dashboardChildNavs, &dtos.NavLink{Text: "导入", Icon: "fa fa-download", Url: setting.AppSubUrl + "/dashboard/new/?editview=import"})
 	}
 
 	data.MainNavLinks = append(data.MainNavLinks, &dtos.NavLink{
@@ -93,12 +93,12 @@ func setIndexViewData(c *middleware.Context) (*dtos.IndexViewData, error) {
 
 	if setting.AlertingEnabled && (c.OrgRole == m.ROLE_ADMIN || c.OrgRole == m.ROLE_EDITOR) {
 		alertChildNavs := []*dtos.NavLink{
-			{Text: "Alert List", Url: setting.AppSubUrl + "/alerting/list"},
-			{Text: "Notifications", Url: setting.AppSubUrl + "/alerting/notifications"},
+			{Text: "告警列表", Url: setting.AppSubUrl + "/alerting/list"},
+			{Text: "告警通知", Url: setting.AppSubUrl + "/alerting/notifications"},
 		}
 
 		data.MainNavLinks = append(data.MainNavLinks, &dtos.NavLink{
-			Text:     "Alerting",
+			Text:     "告警列表",
 			Icon:     "icon-gf icon-gf-alert",
 			Url:      setting.AppSubUrl + "/alerting/list",
 			Children: alertChildNavs,
@@ -107,13 +107,13 @@ func setIndexViewData(c *middleware.Context) (*dtos.IndexViewData, error) {
 
 	if c.OrgRole == m.ROLE_ADMIN {
 		data.MainNavLinks = append(data.MainNavLinks, &dtos.NavLink{
-			Text: "Data Sources",
+			Text: "数据源",
 			Icon: "icon-gf icon-gf-datasources",
 			Url:  setting.AppSubUrl + "/datasources",
 		})
 
 		data.MainNavLinks = append(data.MainNavLinks, &dtos.NavLink{
-			Text: "Plugins",
+			Text: "插件",
 			Icon: "icon-gf icon-gf-apps",
 			Url:  setting.AppSubUrl + "/plugins",
 		})
@@ -156,7 +156,7 @@ func setIndexViewData(c *middleware.Context) (*dtos.IndexViewData, error) {
 
 			if c.OrgRole == m.ROLE_ADMIN {
 				appLink.Children = append(appLink.Children, &dtos.NavLink{Divider: true})
-				appLink.Children = append(appLink.Children, &dtos.NavLink{Text: "Plugin Config", Icon: "fa fa-cog", Url: setting.AppSubUrl + "/plugins/" + plugin.Id + "/edit"})
+				appLink.Children = append(appLink.Children, &dtos.NavLink{Text: "插件配置", Icon: "fa fa-cog", Url: setting.AppSubUrl + "/plugins/" + plugin.Id + "/edit"})
 			}
 
 			if len(appLink.Children) > 0 {
@@ -167,14 +167,14 @@ func setIndexViewData(c *middleware.Context) (*dtos.IndexViewData, error) {
 
 	if c.IsGrafanaAdmin {
 		data.MainNavLinks = append(data.MainNavLinks, &dtos.NavLink{
-			Text: "Admin",
+			Text: "服务器管理",
 			Icon: "fa fa-fw fa-cogs",
 			Url:  setting.AppSubUrl + "/admin",
 			Children: []*dtos.NavLink{
-				{Text: "Global Users", Url: setting.AppSubUrl + "/admin/users"},
-				{Text: "Global Orgs", Url: setting.AppSubUrl + "/admin/orgs"},
-				{Text: "Server Settings", Url: setting.AppSubUrl + "/admin/settings"},
-				{Text: "Server Stats", Url: setting.AppSubUrl + "/admin/stats"},
+				{Text: "服务器用户", Url: setting.AppSubUrl + "/admin/users"},
+				{Text: "服务器用户组", Url: setting.AppSubUrl + "/admin/orgs"},
+				{Text: "服务器性能参数视图", Url: setting.AppSubUrl + "/admin/settings"},
+				{Text: "服务器统计概述", Url: setting.AppSubUrl + "/admin/stats"},
 			},
 		})
 	}

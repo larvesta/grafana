@@ -50,10 +50,10 @@ export class PrefsControlCtrl {
 
 var template = `
 <form name="ctrl.prefsForm" class="section gf-form-group">
-  <h3 class="page-heading">Preferences</h3>
+  <h3 class="page-heading">概述</h3>
 
   <div class="gf-form">
-    <span class="gf-form-label width-9">UI Theme</span>
+    <span class="gf-form-label width-9">UI 主题</span>
     <div class="gf-form-select-wrapper max-width-20">
       <select class="gf-form-input" ng-model="ctrl.prefs.theme" ng-options="f.value as f.text for f in ctrl.themes"></select>
     </div>
@@ -67,14 +67,14 @@ var template = `
   </div>
 
   <div class="gf-form">
-    <label class="gf-form-label width-9">Timezone</label>
+    <label class="gf-form-label width-9">时区</label>
     <div class="gf-form-select-wrapper max-width-20">
       <select class="gf-form-input" ng-model="ctrl.prefs.timezone" ng-options="f.value as f.text for f in ctrl.timezones"></select>
     </div>
   </div>
 
   <div class="gf-form-button-row">
-    <button type="submit" class="btn btn-success" ng-click="ctrl.updatePrefs()">Update</button>
+    <button type="submit" class="btn btn-success" ng-click="ctrl.updatePrefs()">更新</button>
   </div>
 </form>
 `;

@@ -1,7 +1,7 @@
 <div class="modal-body" ng-controller="InspectCtrl" ng-init="init()">
 	<div class="modal-header">
 		<h2 class="modal-header-title">
-			Inspector
+			{{'Inspector'|translate}}
 		</h2>
 
 		<ul class="gf-tabs">
@@ -20,14 +20,14 @@
 	<div class="modal-content">
 
 		<div ng-if="editor.index == 0">
-			<h5 class="section-heading">Request details</h5>
+			<h5 class="section-heading">{{'Details'|transalte}}</h5>
 			<table class="filter-table gf-form-group">
 				<tr>
-					<td>Url</td>
+					<td>{{'Url'|translate}}</td>
 					<td>{{inspector.error.config.url}}</td>
 				</tr>
 				<tr>
-					<td>Method</td>
+					<td>{{'Method'|translate}}</td>
 					<td>{{inspector.error.config.method}}</td>
 				</tr>
 				<tr ng-repeat="(key, value) in inspector.error.config.headers">
@@ -40,7 +40,7 @@
 				</tr>
 			</table>
 
-			<h5 class="section-heading">Request parameters</h5>
+			<h5 class="section-heading">{{'Request parameters'|translate}}</h5>
 			<table class="filter-table">
 				<tr ng-repeat="param in request_parameters">
 					<td>
@@ -62,12 +62,12 @@
 
 		<div ng-if="editor.index == 2">
 
-			<label>Message:</label>
+			<label>{{'Message'|translate}}:</label>
 <pre>
 {{message}}
 </pre>
 
-			<label>Stack trace:</label>
+			<label>{{'Stack trace'|translate}}:</label>
 			<pre>
 			{{stack_trace}}
 		</pre>

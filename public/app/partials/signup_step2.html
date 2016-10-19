@@ -21,7 +21,7 @@
 
 			<div style="display: inline-block; margin-top: 25px; width: 300px">
 					<div class="editor-option">
-						<label class="small">Your email:</label>
+						<label class="small">{{'Email'|translate}}:</label>
 						<span class="large">{{formModel.email}}</span>
 					</div>
 			</div>
@@ -38,20 +38,20 @@
 				</div>
 
 				<div class="gf-form" ng-if="!autoAssignOrg">
-					<span class="gf-form-label width-9">Org. name</span>
+					<span class="gf-form-label width-9">{{'Organizations'|translate}}</span>
 					<input type="text" name="orgName" class="gf-form-input max-width-14" ng-model='formModel.orgName' placeholder="Name your organization">
 				</div>
 
 				<div class="gf-form">
-					<span class="gf-form-label width-9">Your name</span>
+					<span class="gf-form-label width-9">{{'Name'|translate}}</span>
 					<input type="text" name="name" class="gf-form-input max-width-14" ng-model='formModel.name' placeholder="(optional)">
 				</div>
 				<div class="gf-form">
-					<span class="gf-form-label width-9">Username</span>
+					<span class="gf-form-label width-9">{{'Username'|translate}}</span>
 					<input type="text" class="gf-form-input max-width-14" required ng-model='formModel.username' placeholder="Username" autocomplete="off">
 				</div>
 				<div class="gf-form">
-					<span class="gf-form-label width-9">Password</span>
+					<span class="gf-form-label width-9">{{'Password'|translate}}</span>
 					<input type="password" class="gf-form-input max-width-14" required ng-model="formModel.password" id="inputPassword" placeholder="password" autocomplete="off">
 				</div>
 
@@ -61,7 +61,7 @@
 
 				<div class="gf-form-button-row">
 					<button type="submit" class="btn" ng-click="ctrl.submit();" ng-class="{'btn-inverse': !signUpForm.$valid, 'btn-primary': signUpForm.$valid}">
-						Continue
+						{{'Continue'|translate}}
 					</button>
 				</div>
 			</form>

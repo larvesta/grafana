@@ -21,19 +21,19 @@
 
 			<form name="inviteForm" class="login-form gf-form-group">
 				<div class="gf-form">
-					<span class="gf-form-label width-7">Email</span>
+					<span class="gf-form-label width-7">{{'Email'|translate}}</span>
 					<input type="email" name="email" class="gf-form-input max-width-21" required ng-model='formModel.email' placeholder="Email">
 				</div>
 				<div class="gf-form">
-					<span class="gf-form-label width-7">Name</span>
+					<span class="gf-form-label width-7">{{'Name'|translate}}</span>
 					<input type="text" name="name" class="gf-form-input max-width-21" ng-model='formModel.name' placeholder="Name (optional)">
 				</div>
 				<div class="gf-form">
-					<span class="gf-form-label width-7">Username</span>
+					<span class="gf-form-label width-7">{{'Username'|translate}}</span>
 					<input type="text" name="username" class="gf-form-input max-width-21" required ng-model='formModel.username' placeholder="Username">
 				</div>
 				<div class="gf-form">
-					<span class="gf-form-label width-7">Password</span>
+					<span class="gf-form-label width-7">{{'Password'|translate}}</span>
 					<input type="password" name="password" class="gf-form-input max-width-21" required ng-model="formModel.password" id="inputPassword" placeholder="password">
 				</div>
 
@@ -43,7 +43,7 @@
 
 				<div class="gf-form-button-row">
 					<button type="submit" class="btn btn-inverse" ng-click="submit();" ng-class="{'btn-inverse': !inviteForm.$valid, 'btn-primary': inviteForm.$valid}">
-						Continue
+          {{'Continue'|translate}}
 					</button>
 				</div>
 			</form>
