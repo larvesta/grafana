@@ -249,8 +249,7 @@ var TRANSLATE_EN = {
   'Copy Link': 'Copy Link',
   'Local Snapshot': 'Local Snapshot',
   'Max items' : 'Max items',
-  'Search': 'Search',
-  'Query': 'Query'
+  'Search': 'Search'
 };
 
 var TRANSLATE_ZH = {
@@ -483,8 +482,7 @@ var TRANSLATE_ZH = {
   'Copy Link': '复制链接',
   'Local Snapshot': '本地快照',
   'Max items': '最大项数',
-  'Search': '查找',
-  'Query': '查询'
+  'Search': '查找'
 };
 
 export class GrafanaApp {
