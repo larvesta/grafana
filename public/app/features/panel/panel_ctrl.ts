@@ -130,8 +130,8 @@ export class PanelCtrl {
 
   getMenu() {
     let menu = [];
-    menu.push({text: 'View', click: 'ctrl.viewPanel(); dismiss();'});
-    menu.push({text: 'Edit', click: 'ctrl.editPanel(); dismiss();', role: 'Editor'});
+    menu.push({text: '视图', click: 'ctrl.viewPanel(); dismiss();'});
+    menu.push({text: '编辑', click: 'ctrl.editPanel(); dismiss();', role: 'Editor'});
     //if (!this.fullscreen) { //  duplication is not supported in fullscreen mode
     //  menu.push({ text: 'Duplicate', click: 'ctrl.duplicate()', role: 'Editor' });
     //}
@@ -140,7 +140,7 @@ export class PanelCtrl {
   }
 
   getExtendedMenu() {
-    var actions = [{text: 'Panel JSON', click: 'ctrl.editPanelJson(); dismiss();'}];
+    var actions = [{text: 'JSON', click: 'ctrl.editPanelJson(); dismiss();'}];
     this.events.emit('init-panel-actions', actions);
     return actions;
   }
@@ -197,8 +197,8 @@ export class PanelCtrl {
 
   removePanel() {
     this.publishAppEvent('confirm-modal', {
-      title: 'Remove Panel',
-      text: 'Are you sure you want to remove this panel?',
+      title: '移除面板',
+      text: '确定移除吗?',
       icon: 'fa-trash',
       yesText: 'Remove',
       onConfirm: () => {

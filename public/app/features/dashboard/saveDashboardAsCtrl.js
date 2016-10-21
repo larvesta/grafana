@@ -39,9 +39,9 @@ function (angular) {
           err.isHandled = true;
 
           $scope.appEvent('confirm-modal', {
-            title: 'Conflict',
-            text: 'Dashboard with the same name exists.',
-            text2: 'Would you still like to save this dashboard?',
+            title: '冲突',
+            text: '存在同名Dashboard.',
+            text2: '依旧要保存dashboard?',
             yesText: "Save & Overwrite",
             icon: "fa-warning",
             onConfirm: function() {

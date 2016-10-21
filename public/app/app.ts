@@ -244,7 +244,10 @@ var TRANSLATE_EN = {
   'Open original dashboard': 'Open original dashboard',
   'No matching': 'No matching',
   'Max shown': 'Max shown',
-  'Edit': 'Edit'
+  'Snapshot name': 'Snapshot name',
+  'Expire': 'Expire',
+  'Copy Link': 'Copy Link',
+  'Local Snapshot': 'Local Snapshot'
 };
 
 var TRANSLATE_ZH = {
@@ -472,7 +475,10 @@ var TRANSLATE_ZH = {
   'Open original dashboard': '打开原始dashboard',
   'No matching': '无符合记录',
   'Max shown': '最大显示',
-  'Edit': '編輯'
+  'Snapshot name': '快照名称',
+  'Expire': '期限',
+  'Copy Link': '复制链接',
+  'Local Snapshot': '本地快照'
 };
 
 export class GrafanaApp {

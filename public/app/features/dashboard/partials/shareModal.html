@@ -31,8 +31,7 @@
 		</div>
 		<div class="share-modal-content">
 			<p class="share-modal-info-text">
-				The html code below can be pasted and included in another web page. Unless anonymous access
-				is enabled the user viewing that page need to be signed into grafana for the graph to load.
+				下面的HTML代码可以粘贴在另一个网页。除非匿名访问者需要登录到grafana才能加载用户浏览视图.
 			</p>
 
 			<div ng-include src="'shareLinkOptions.html'"></div>
@@ -61,7 +60,7 @@
 			checked="options.includeTemplateVars" on-change="buildUrl()">
 		</gf-form-switch>
 		<div class="gf-form">
-			<span class="gf-form-label width-12">Theme</span>
+			<span class="gf-form-label width-12">{{'Switch theme'|translate}}</span>
 			<div class="gf-form-select-wrapper width-6">
 				<select class="gf-form-input" ng-model="options.theme" ng-options="f as f for f in ['current', 'dark', 'light']" ng-change="buildUrl()"></select>
 			</div>
@@ -76,7 +75,7 @@
 		</div>
 		<div class="share-modal-content">
 			<p class="share-modal-info-text">
-				Create a direct link to this dashboard or panel, customized with the options below.
+				创建一个直接链接到这个dashboard或面板，自定义与下面的选项.
 			</p>
 			<div ng-include src="'shareLinkOptions.html'"></div>
 			<div>
@@ -107,13 +106,12 @@
       <div class="share-modal-content">
         <div ng-if="step === 1">
           <p class="share-modal-info-text">
-            A snapshot is an instant way to share an interactive dashboard publicly.
-            When created, we <strong>strip sensitive data</strong> like queries (metric, template and annotation) and panel links,
-            leaving only the visible metric data and series names embedded into your dashboard.
+            快照是一个公共即时的方式来共享一个互动的dashboard.
+            当创建时,我们带敏感的数据,如查询（度量,模板和注释）和面板链接,
+            只留下嵌入在您的dashboard中的可见的度量数据和系列名称.
           </p>
           <p class="share-modal-info-text">
-            Keep in mind, your <strong>snapshot can be viewed by anyone</strong> that has the link and can reach the URL.
-            Share wisely.
+            你的快照可以被任何拥有链接的人分享.
           </p>
         </div>
 
@@ -126,11 +124,11 @@
 
 				<div class="gf-form-group share-modal-options">
 					<div class="gf-form" ng-if="step === 1">
-						<span class="gf-form-label width-12">Snapshot name</span>
+						<span class="gf-form-label width-12">{{'Snapshot name'|translate}}</span>
 						<input type="text" ng-model="snapshot.name" class="gf-form-input max-width-15" >
 					</div>
 					<div class="gf-form" ng-if="step === 1">
-						<span class="gf-form-label width-12">Expire</span>
+						<span class="gf-form-label width-12">{{'Expire'|translate}}</span>
 						<div class="gf-form-select-wrapper max-width-15">
 							<select class="gf-form-input" ng-model="snapshot.expires" ng-options="f.value as f.text for f in expireOptions"></select>
 						</div>
@@ -143,7 +141,7 @@
 								{{snapshotUrl}}
 							</a>
 							<br>
-							<button class="btn btn-inverse" data-clipboard-text="{{snapshotUrl}}" clipboard-button><i class="fa fa-clipboard"></i> Copy Link</button>
+							<button class="btn btn-inverse" data-clipboard-text="{{snapshotUrl}}" clipboard-button><i class="fa fa-clipboard"></i> {{'Copy Link'|translate}}</button>
 						</div>
 					</div>
 				</div>
@@ -151,7 +149,7 @@
 				<div ng-if="step === 1" class="gf-form-button-row">
 					<button class="btn gf-form-btn width-10 btn-success" ng-click="createSnapshot()" ng-disabled="loading">
 						<i class="fa fa-save"></i>
-						Local Snapshot
+						{{'Local Snapshot'|translate}}
 					</button>
 					<button class="btn gf-form-btn width-16 btn-secondary" ng-if="externalEnabled" ng-click="createSnapshot(true)" ng-disabled="loading">
 						<i class="fa fa-cloud-upload"></i>
@@ -161,7 +159,7 @@
 				</div>
 
 				<div class="pull-right" ng-if="step === 2" style="padding: 5px">
-					Did you make a mistake? <a class="pointer" ng-click="deleteSnapshot()" target="_blank">delete snapshot.</a>
+					<a class="pointer" ng-click="deleteSnapshot()" target="_blank">{{'Delete'|translate}}</a>
 				</div>
 			</div>
 		</div>

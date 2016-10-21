@@ -10,7 +10,7 @@ function (angular, _, config) {
 
   module.controller('RowCtrl', function($scope, $rootScope, $timeout) {
     var _d = {
-      title: "Row",
+      title: "行",
       height: "150px",
       collapse: false,
       editable: true,
@@ -47,8 +47,8 @@ function (angular, _, config) {
       }
 
       $scope.appEvent('confirm-modal', {
-        title: 'Delete',
-        text: 'Are you sure you want to delete this row?',
+        title: '删除',
+        text: '确定删除行?',
         icon: 'fa-trash',
         yesText: 'Delete',
         onConfirm: function() {
