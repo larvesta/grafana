@@ -1,6 +1,6 @@
 {
   "type": "panel",
-  "name": "Plugin list",
+  "name": "插件列表",
   "id": "pluginlist",
 
   "info": {

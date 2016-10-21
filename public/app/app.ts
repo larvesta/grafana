@@ -247,7 +247,10 @@ var TRANSLATE_EN = {
   'Snapshot name': 'Snapshot name',
   'Expire': 'Expire',
   'Copy Link': 'Copy Link',
-  'Local Snapshot': 'Local Snapshot'
+  'Local Snapshot': 'Local Snapshot',
+  'Max items' : 'Max items',
+  'Search': 'Search',
+  'Query': 'Query'
 };
 
 var TRANSLATE_ZH = {
@@ -478,7 +481,10 @@ var TRANSLATE_ZH = {
   'Snapshot name': '快照名称',
   'Expire': '期限',
   'Copy Link': '复制链接',
-  'Local Snapshot': '本地快照'
+  'Local Snapshot': '本地快照',
+  'Max items': '最大项数',
+  'Search': '查找',
+  'Query': '查询'
 };
 
 export class GrafanaApp {

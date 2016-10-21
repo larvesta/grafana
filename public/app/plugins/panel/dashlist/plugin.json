@@ -1,11 +1,11 @@
 {
   "type": "panel",
-  "name": "Dashboard list",
+  "name": "Dashboard 列表",
   "id": "dashlist",
 
   "info": {
     "author": {
-      "name": "Grafana Project",
+      "name": "胜软云监控平台",
       "url": "http://grafana.org"
 },
     "logos": {
