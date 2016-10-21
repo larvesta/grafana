@@ -98,7 +98,7 @@ export class SearchCtrl {
       });
 
       if (this.queryHasNoFilters()) {
-        this.results.unshift({ title: 'Home', url: config.appSubUrl + '/', type: 'dash-home' });
+        this.results.unshift({ title: '主页', url: config.appSubUrl + '/', type: 'dash-home' });
       }
     });
   }

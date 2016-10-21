@@ -109,7 +109,7 @@ export class DashNavCtrl {
         err.isHandled = true;
 
         $scope.appEvent('confirm-modal', {
-          title: 'Conflict',
+          title: '冲突',
           text: 'Someone else has updated this dashboard.',
           text2: 'Would you still like to save this dashboard?',
           yesText: "Save & Overwrite",
@@ -124,7 +124,7 @@ export class DashNavCtrl {
         err.isHandled = true;
 
         $scope.appEvent('confirm-modal', {
-          title: 'Conflict',
+          title: '冲突',
           text: 'Dashboard with the same name exists.',
           text2: 'Would you still like to save this dashboard?',
           yesText: "Save & Overwrite",
@@ -139,7 +139,7 @@ export class DashNavCtrl {
         err.isHandled = true;
 
         $scope.appEvent('confirm-modal', {
-          title: 'Plugin Dashboard',
+          title: 'Dashboard插件',
           text: err.data.message,
           text2: 'Your changes will be lost when you update the plugin. Use Save As to create custom version.',
           yesText: "Overwrite",
@@ -179,7 +179,7 @@ export class DashNavCtrl {
       }
 
       $scope.appEvent('confirm-modal', {
-        title: 'Delete',
+        title: '删除',
         text: 'Do you want to delete this dashboard?',
         text2: text2,
         icon: 'fa-trash',

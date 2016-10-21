@@ -74,7 +74,7 @@ if(!_.isUndefined(ARGS.name)) {
 for (var i = 0; i < rows; i++) {
 
   dashboard.rows.push({
-    title: 'Chart',
+    title: '图表',
     height: '300px',
     panels: [
       {

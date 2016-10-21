@@ -151,7 +151,7 @@ export class DataSourceEditCtrl {
 
     delete(s) {
       appEvents.emit('confirm-modal', {
-        title: 'Delete',
+        title: '删除',
         text: 'Are you sure you want to delete this datasource?',
         yesText: "Delete",
         icon: "fa-trash",

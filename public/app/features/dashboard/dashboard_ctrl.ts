@@ -109,7 +109,7 @@ export class DashboardCtrl {
 
       $scope.addRowDefault = function() {
         $scope.resetRow();
-        $scope.row.title = 'New row';
+        $scope.row.title = '新建行';
         $scope.addRow($scope.dashboard, $scope.row);
       };
 

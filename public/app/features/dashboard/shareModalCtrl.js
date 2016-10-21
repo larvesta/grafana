@@ -30,7 +30,7 @@ function (angular, _, require, config) {
       }
 
       if (!$scope.dashboard.meta.isSnapshot) {
-        $scope.tabs.push({title: '导入', src: 'shareExport.html'});
+        $scope.tabs.push({title: '导出', src: 'shareExport.html'});
       }
 
       $scope.buildUrl();
