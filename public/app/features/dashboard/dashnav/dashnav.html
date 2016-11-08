@@ -21,7 +21,7 @@
 		</a>
 	</li>
 	<li ng-if="contextSrv.isGrafanaAdmin && dashboardMeta.canShare" class="dropdown">
-		<a class="pointer" ng-click="hideTooltip($event)" bs-tooltip="'共享dashboard'" data-placement="bottom" data-toggle="dropdown"><i class="fa fa-share-square-o"></i></a>
+		<a class="pointer" ng-click="hideTooltip($event)" bs-tooltip="'共享主页'" data-placement="bottom" data-toggle="dropdown"><i class="fa fa-share-square-o"></i></a>
 		<ul class="dropdown-menu">
 			<li>
 				<a class="pointer" ng-click="shareDashboard(0)">
@@ -41,31 +41,31 @@
 		</ul>
 	</li>
 	<li ng-show="::dashboardMeta.canSave">
-		<a ng-click="saveDashboard()" bs-tooltip="'保存dashboard'" data-placement="bottom"><i class="fa fa-save"></i></a>
+		<a ng-click="saveDashboard()" bs-tooltip="'保存主页'" data-placement="bottom"><i class="fa fa-save"></i></a>
 	</li>
   <li ng-if="contextSrv.isGrafanaAdmin || dashboardMeta.canEdit">
-		<a ng-click="openEditView('settings');" bs-tooltip="'打开dashboard编辑视图'" data-placement="bottom"><i class="fa fa-edit"></i></a>
-	</li>
-  <li ng-if="contextSrv.isGrafanaAdmin || dashboardMeta.canEdit">
-		<a ng-click="hideDashboardControls();" bs-tooltip="'显示/隐藏dashboard侧边窗'" data-placement="bottom"><i class="fa fa-exchange"></i></a>
+		<a ng-click="openEditView('settings');" bs-tooltip="'编辑主页'" data-placement="bottom"><i class="fa fa-edit"></i></a>
 	</li>
   <li ng-if="contextSrv.isGrafanaAdmin || dashboardMeta.canEdit">
 		<a ng-click="viewJson();" bs-tooltip="'JSON视图'" data-placement="bottom"><i class="fa fa-eye"></i></a>
 	</li>
     <li ng-if="contextSrv.isGrafanaAdmin && dashboardMeta.canEdit">
-		<a ng-click="openEditView('annotations');" bs-tooltip="'注解视图'" data-placement="bottom"><i class="fa fa-info-circle"></i></a>
+		<a ng-click="openEditView('annotations');" bs-tooltip="'主页注解'" data-placement="bottom"><i class="fa fa-info-circle"></i></a>
 	</li>
   <li ng-if="contextSrv.isGrafanaAdmin && dashboardMeta.canEdit">
-		<a ng-click="saveDashboardAs();" bs-tooltip="'另存为'" data-placement="bottom"><i class="fa fa-save"></i></a>
+		<a ng-click="saveDashboardAs();" bs-tooltip="'主页另存为'" data-placement="bottom"><i class="fa fa-save"></i></a>
 	</li>
   <li ng-if="contextSrv.isGrafanaAdmin && dashboardMeta.canSave">
-		<a ng-click="deleteDashboard();" bs-tooltip="'删除dashboard'" data-placement="bottom"><i class="fa fa-trash"></i></a>
+		<a ng-click="deleteDashboard();" bs-tooltip="'删除主页'" data-placement="bottom"><i class="fa fa-trash"></i></a>
 	</li>
   <li ng-if="contextSrv.isGrafanaAdmin && dashboardMeta.canEdit">
 		<a ng-click="openEditView('templating');" bs-tooltip="'模板'" data-placement="bottom"><i class="fa fa-building"></i></a>
 	</li>
 	<li ng-if="dashboard.snapshot.originalUrl">
-		<a ng-href="{{dashboard.snapshot.originalUrl}}" bs-tooltip="'打开原始dashboard'" data-placement="bottom"><i class="fa fa-link"></i></a>
+		<a ng-href="{{dashboard.snapshot.originalUrl}}" bs-tooltip="'打开原始主页'" data-placement="bottom"><i class="fa fa-link"></i></a>
+	</li>
+  <li ng-if="contextSrv.isGrafanaAdmin || dashboardMeta.canEdit">
+		<a ng-click="hideDashboardControls();" bs-tooltip="'显示/隐藏主页侧边窗'" data-placement="bottom"><i class="fa fa-sliders"></i></a>
 	</li>
 </ul>
 

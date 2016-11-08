@@ -14,7 +14,7 @@ function (angular, _, config) {
       height: "150px",
       collapse: false,
       editable: true,
-      panels: [],
+      panels: []
     };
 
     _.defaults($scope.row,_d);
